@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<io_pair>
+  <description>Upon creation of the file "SendNow," The TH should send a SIG_INT to this test case to trigger the NULL pointer vulnerability. </description>
+  <id>1007</id>
+  <io_pair_category>bad</io_pair_category>
+  <name>TC_C_690_base11_bad</name>
+  <platform>BOTH</platform>
+  <technical_impact>DOS_UNCONTROLLED_EXIT</technical_impact>
+  <timeout_execute>60</timeout_execute>
+  <io_groups>
+    <io_group>
+      <co_process>SetupTFTPSocketC somefile4.txt</co_process>
+      <io_parameters>
+        <io_parameter>
+          <feature>signal</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>2</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+            <io_value>
+              <order>2</order>
+              <val>signal.lock</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+    <io_group>
+      <co_process xsi:nil="true"/>
+      <io_parameters>
+        <io_parameter>
+          <feature>return_status_o</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>139</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+  </io_groups>
+</io_pair>

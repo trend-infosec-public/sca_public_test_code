@@ -1,0 +1,48 @@
+File: ../johndoe/birthcertificate.txt
+Owner: janedoe
+Size: xxx
+---------- FILE BEGIN ----------
+This is not a real birth certificate.  Just some information about mine.
+
+Date of Birth: 01/01/0001
+Place of Birth: New York, NY
+Hospital: Some Hospital
+File Number: 0000000000000
+Parents: Joe & Janice Doe
+----------  FILE END  ----------
+File: /../johndoe/birthcertificate.txt
+Owner: janedoe
+Size: xxx
+---------- FILE BEGIN ----------
+This is not a real birth certificate.  Just some information about mine.
+
+Date of Birth: 01/01/0001
+Place of Birth: New York, NY
+Hospital: Some Hospital
+File Number: 0000000000000
+Parents: Joe & Janice Doe
+----------  FILE END  ----------
+File: ./../johndoe/birthcertificate.txt
+Owner: janedoe
+Size: xxx
+---------- FILE BEGIN ----------
+This is not a real birth certificate.  Just some information about mine.
+
+Date of Birth: 01/01/0001
+Place of Birth: New York, NY
+Hospital: Some Hospital
+File Number: 0000000000000
+Parents: Joe & Janice Doe
+----------  FILE END  ----------
+File: ../johndoe/birthcertificate.txt
+Owner: janedoe
+Size: xxx
+---------- FILE BEGIN ----------
+This is not a real birth certificate.  Just some information about mine.
+
+Date of Birth: 01/01/0001
+Place of Birth: New York, NY
+Hospital: Some Hospital
+File Number: 0000000000000
+Parents: Joe & Janice Doe
+----------  FILE END  ----------

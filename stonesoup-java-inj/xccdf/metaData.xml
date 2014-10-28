@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+<cwe_entry_id>369</cwe_entry_id>
+<derived_from_id>0</derived_from_id>
+<name>xccdf</name>
+<language_id>Java</language_id>
+<generation_method_id>engineered</generation_method_id>
+<run_command>java $SS_JAVA_OPTS -jar xccdfexec.jar</run_command>
+<build_command>ant $SS_ANT_OPTS</build_command>
+<run_directory>.</run_directory>
+<build_directory>.</build_directory>
+<line_count>5878</line_count>
+<description/>
+<id>1338</id>
+</project>
+

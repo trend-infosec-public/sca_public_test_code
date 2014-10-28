@@ -1,0 +1,5 @@
+MySQL 
+Bypass Auth Mechanism
+	listcourses  VULNERABLE
+	deletecourse,
+	createcourse,

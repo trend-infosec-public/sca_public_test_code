@@ -1,0 +1,14 @@
+#
+#  Format:  Input / Expected Output / Good | Bad
+
+
+one / 1 / good
+two / 2 / good
+three / 6 / good
+four / 24 / good
+...
+ten / 3628800 / good
+zero / bad input / good
+blah / bad input / good
+
+exit / 1 / bad   #note:  this also results in a file called exit-status with text: 'Application exit with code: 2' in it.  The file is the true 'bad' output

@@ -1,0 +1,1 @@
+This TC is obsolete. It was copied and converted to TC_Java_601_base1.

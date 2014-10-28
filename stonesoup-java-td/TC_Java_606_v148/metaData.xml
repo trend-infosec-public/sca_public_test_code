@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+<cwe_entry_id>606</cwe_entry_id>
+<derived_from_id>0</derived_from_id>
+<name>TC_Java_606_v148</name>
+<language>Java</language>
+<generation_method>engineered</generation_method>
+<run_command>java $SS_JAVA_OPTS -cp "bin" stonesoup.Main</run_command>
+<build_command>ant $SS_ANT_OPTS </build_command>
+<run_directory/>
+<build_directory/>
+<line_count>197</line_count>
+<annotations>
+<name>DATA_FLOW:ARRAY_INDEX_VARIABLE</name>
+<filename>/TC_Java_606_v148/src/stonesoup/ISBNChecker.java</filename>
+<lineNumber>57</lineNumber>
+</annotations>
+<annotations>
+<name>DATA_TYPE:SHORT_CHARACTER</name>
+<filename>/TC_Java_606_v148/src/stonesoup/Main.java</filename>
+<lineNumber>58</lineNumber>
+</annotations>
+<annotations>
+<name>CROSSOVER_POINT</name>
+<filename>/TC_Java_606_v148/src/stonesoup/ISBNChecker.java</filename>
+<lineNumber>33</lineNumber>
+</annotations>
+<annotations>
+<name>CONTROL_FLOW:RECURSIVE</name>
+<filename>/TC_Java_606_v148/src/stonesoup/ISBNChecker.java</filename>
+<lineNumber>34</lineNumber>
+</annotations>
+<annotations>
+<name>SOURCE_TAINT:STDIN</name>
+<filename>/TC_Java_606_v148/src/stonesoup/Main.java</filename>
+<lineNumber>66</lineNumber>
+</annotations>
+<annotations>
+<name>TRIGGER_POINT</name>
+<filename>/TC_Java_606_v148/src/stonesoup/ISBNChecker.java</filename>
+<lineNumber>30</lineNumber>
+</annotations>
+<description/>
+<id>845</id>
+</project>

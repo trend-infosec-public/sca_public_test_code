@@ -1,0 +1,12 @@
+File: janedoe/identity.txt
+Owner: janedoe
+Size: xxx
+---------- FILE BEGIN ----------
+This is some personal identity information.
+
+Social Security Number: 000-00-0000
+Date of Birth: 01/01/0001
+Full Name: Jane Anonymous Doe
+Place of Birth: New York, NY
+Credit Scores: 760, 758, 780
+----------  FILE END  ----------

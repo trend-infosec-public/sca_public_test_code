@@ -1,0 +1,6 @@
+Register 7 is: 0
+Register 8 is: 0
+Register 9 is: 0
+Register 10 is: 0
+Register 11 is: 2377
+Register 12 is: 0

@@ -1,0 +1,14 @@
+//-----------------------------------------------------------------------
+// Commands:															-
+//	list 					Lists server's directory contents			-
+//	get <file_name>			Retrieves a file from the server			-
+//	send <file_name>		Stores a file on the server					-
+//	cd <relative_path>		Changes the server's directory				-
+//	lcd <path> <y/n>		Changes the local directory. followed 		-
+//							  by true if you specified an absolute path	-
+//-----------------------------------------------------------------------
+list
+cd test
+send test2.txt
+cd ..
+quit

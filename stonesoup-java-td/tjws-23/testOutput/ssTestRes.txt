@@ -1,0 +1,10 @@
+HTTP/1.0 200 Ok
+content-type: text/html
+connection: keep-alive
+date: GMT
+last-modified: GMT
+content-length: 27
+server: Rogatkin's JWS based on Acme.Serve/Version 1.13, $Revision: 1.72 $
+mime-version: 1.0
+
+stonesoup test for tjws...

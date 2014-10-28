@@ -1,0 +1,83 @@
+<html>
+<!-- $Id: contactview.htm,v 1.18 2005/12/15 08:08:07 drogatkin Exp $  -->
+<title>@name@</title>
+<link rel="stylesheet" href="/addressbook/styles.css" type="text/css" media="all"/>
+<script src="/addressbook/ajaxhelper.js" language="Javascript"></script>
+<script src="/addressbook/ia.js" language="Javascript"></script>
+<script>
+   function applyContact() {
+      // TODO submit in a hidden iframe
+   }
+   function submitContact() {
+     document.contactview.elements['submit.x'].disabled = false;
+     fillEmpties(document.contactview);
+     document.contactview.submit();
+   }
+   function showTab(name) {
+      var tabs = ['general', 'details', 'web', 'cert' ];
+      for (var i=0; i<tabs.length; i++)
+       if (tabs[i] == name) {
+          document.all[tabs[i]+'.tab'].style.display="";
+          document.all[tabs[i]].style.backgroundColor = "#D0FFD0";
+       } else {
+          document.all[tabs[i]+'.tab'].style.display="none";
+          document.all[tabs[i]].style.backgroundColor = "#FFFFFF";
+       }
+   }
+   function fillEmpties(form) {
+     for (var e = 0; e < form.elements.length; e++) {
+       var el = form.elements[e];
+       if ( el.type == 'text' || el.type == 'textarea' ||
+          el.type == 'password') { 
+          if (el.value == '') 
+              el.value = ' ';
+       }
+     }
+   }
+</script>
+<body onload="showTab('general')">
+<!-- TODO: make it optional for ajaxed page -->
+ @%'header.htm'@
+<div id="error"><blink>@error@</blink></div>
+<table id="nav_tabs">
+<tr>
+  <td><div id="general" onClick="showTab('general')" onmouseover="this.style.backgroundColor='beige'">@label.general@</div></td>
+  <td><div id="details" onClick="showTab('details')">@label.details@</div></td>
+  <td><div id="web"  onClick="showTab('web')">@label.web@</div></td>
+  <td><div id="cert" onClick="showTab('cert')">@label.cert@</div></td>
+  
+</tr>
+</table>
+<form name="contactview" method="post" enctype="multipart/form-data" action="Contactview">
+<div>@label.name@<div><input type="text" name="name" value="@name@" size="62"></div></div>
+<div></div>
+<div id="general.tab">
+ @%'general.htm'@
+</div>
+<div id="details.tab">
+ @%'addr_persinfo.htm'@
+</div>
+<div id="web.tab">
+ @%'web.htm'@
+</div>
+<div id="cert.tab">
+ @%'cert.htm'@
+</div>
+<input type="hidden" name="beforename" value="@contact.getName*()*.getLast*()*@">
+<input type="hidden" name="hash" value="@contact.getName*()*.hashCode*()*@">
+<input type="hidden" name="folder" value="@folder@">
+<!-- preserve tree state -->
+@state(<input type="hidden" name="state" value="@element@">)@
+<input disabled type="hidden" name="submit.x" value="1">
+</form>
+<div align="right">
+<table border="0" cellpadding="10">
+  <tr>
+     @readonly{@true()@@(<td onClick='submitContact()' style="cursor: hand">[@commonlabel.ok@]</td>
+                         <td onClick='applyContact()'>@commonlabel.apply@</td>)@}@<td style="cursor: hand" onClick="window.location='abfrontview?nodeid=@:folder@@state(&state=@:element@)@'">[@commonlabel.cancel@]</td>
+  </tr>
+</table>
+</div>
+@%'footer.htm'@
+</body>
+</html>

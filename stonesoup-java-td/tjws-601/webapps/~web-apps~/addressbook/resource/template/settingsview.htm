@@ -1,0 +1,48 @@
+<html>
+<!-- $Id: settingsview.htm,v 1.4 2005/12/17 07:30:01 drogatkin Exp $ 
+  TODO: split tabs content to includes
+  -->
+<link rel="stylesheet" href="/addressbook/styles.css" type="text/css" media="all"/>
+<script src="/addressbook/ajaxhelper.js" language="Javascript"></script>
+<script>
+// <!--
+function validate() {
+  document.settings.submit();
+}
+// -->
+</script> 
+ @%'header.htm'@
+
+main | tab | ui | cert | log
+<form name="settings">
+<div id="ui_tab">
+<div class="smallHeader">
+@label.ui@
+</div>
+@label.contactsperpage@<select name="pagesize">
+<option>20</option>
+<option>50</option>
+<option>100</option>
+<option>@commonlabel.all@</option>
+</select>
+</div>
+<div id="main_tab">
+<div id="main" class="smallHeader">
+@label.main@</div>
+<div><input type="checkbox" value="1" name="bypasslogin" @bypasslogin@>@label.bypasslogin@</div>
+</div>
+</form>
+
+<table border="0" cellspacing="20">
+<tr>
+  <td>
+	<div style="cursor: hand" onclick="validate()">[@commonlabel.ok@]</div>
+  </td>
+  <td>
+	<div style="cursor: hand" onclick="document.location='Abfrontview';">[@commonlabel.cancel@]</div>
+  </td>
+</tr>
+</table>
+<p>
+@%'footer.htm'@
+</html>

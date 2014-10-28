@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Content-Length: 192
+Content-Type: text/html; charset=utf-8
+
+<html>
+<head>
+<title>Logged Messages</title>
+</head>
+<body>
+<h3>Logged Messages</h3>
+<p><strong>Log File: </strong>.blacklist</p>
+<h4>Messages Logged</h4>
+<p>regex=.*\.html</p>
+</body>
+</html>

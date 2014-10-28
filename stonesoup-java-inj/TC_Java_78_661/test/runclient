@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd ../testData
+java  -classpath ../../FTPTestClient/bin stonesoup.FTPTestClient @$1
+

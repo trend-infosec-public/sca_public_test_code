@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+
+<html>
+<head>
+<title>; cat /etc/group Files</title>
+</head>
+<body>
+<h3 style="color:red;">Command Failed</h3>
+<p style="font-family:monospace;font-size:12px;">ls: cannot access users/: No such file or directory<br>
+</p>
+</body>
+</html>

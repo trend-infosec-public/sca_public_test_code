@@ -1,0 +1,19 @@
+gcc -std=c99 -o0 -Wall -o tc_c_476_server tc_c_476_server.c
+gcc -std=c99 -o0 -Wall -o tc_c_476_client tc_c_476_client.c
+
+#./tc_c_476_server&
+#sleep 1
+#./tc_c_476_client quit
+#sleep 1
+./tc_c_476_server&
+./tc_c_476_client encrypt HELLO WQPTA
+sleep 1
+./tc_c_476_client decrypt DUAEO WQPTA
+sleep 1
+./tc_c_476_client encrypt GOODBYE ABCDEFG
+sleep 1
+./tc_c_476_client decrypt GPQGFDK ABCDEFG
+sleep 1
+./tc_c_476_client encrypt BAD@@ INPUT
+sleep 1
+pkill tc_c_476_server

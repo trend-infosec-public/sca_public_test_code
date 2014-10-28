@@ -1,0 +1,166 @@
+<!-- $Id: addr_persinfo.htm,v 1.24 2006/01/09 09:20:30 drogatkin Exp $  -->
+<script>
+   var addrs = [ @address('@element.getDescription*()*@',)@ ''];
+   var commmts = [ @commentary('@element.getDescription*()*@',)@ ''];
+   var selColor;
+
+   function showAddress(addr) {
+     // todo consider introspect elements of nav table
+     // todo use a function to screen possible \r\n
+     for (var i=0; i<addrs.length; i++)
+        if (addr == addrs[i]){ // use for (var ca in addrs)
+           document.all[addr+'#adr'].style.display="";
+           document.all['tabadr_'+addr].style.backgroundColor= "#C0C0D0";
+           selColor = document.all['tabadr_'+addr].style.backgroundColor;
+        } else if (addrs[i] != '') {
+           document.all[addrs[i]+'#adr'].style.display="none";
+           document.all['tabadr_'+addrs[i]].style.backgroundColor = '#FFFFFF';
+        }
+     
+   }
+
+
+   function showComment(cmt) {
+     for (var c in commmts) 
+        if (cmt == commmts[c]) {
+           document.getElementById(cmt+'#cmt').style.display="";
+           document.all['tabcmt_'+cmt].style.backgroundColor= "#C0C0D0";
+           selColor = document.all['tabcmt_'+cmt].style.backgroundColor;
+        } else if (commmts[c] != '') {
+           document.getElementById(commmts[c]+'#cmt').style.display="none";
+           document.all['tabcmt_'+commmts[c]].style.backgroundColor = '#FFFFFF';
+        }
+     
+   }
+
+   function addItem(name) {  
+     var table = document.all ? // IE
+           document.all[name] :
+           document.getElementById ? // NN6 or other DOM compliant browser
+             document.getElementById(name) : null;
+     if(table) {        
+        var tr =table.rows[0];
+        var tc = tr.insertCell(tr.cells.length);
+        var nid = 'addr_'+tr.cells.length;
+        tc.innerHTML = '<div id="tabadr_'+nid+'" onclick="showAddress('+"'"+nid+"'"+')"><input type="text" size="8" name="addressdescription" value="'+nid+'"></div>';
+        document.all['address'].insertAdjacentHTML('beforeEnd', '<div id="'+nid+'"><textarea rows="4" cols="40" name="addressvalue"></textarea></div>');
+        addrs = addrs.concat(nid);
+        showAddress(nid);
+     }
+
+   }
+   // TODO create generic add/delete methods
+   function deleteAItem(name) {
+     for (var a in addrs) 
+        if (addrs[a] != '') {
+           if (document.all['tabadr_'+addrs[a]].style.backgroundColor == selColor) {
+              document.all['tabadr_'+addrs[a]].innerHTML = "";
+              document.getElementById(addrs[a]).innerHTML = "";
+// TODO remove also from addrs and if size == 1 then hide textarrea
+           }
+        }
+   }
+
+   function editADescr(name) {
+     for (var a in addrs) 
+        if (addrs[a] != '') {
+           if (document.all['tabadr_'+addrs[a]].style.backgroundColor == selColor) {
+              document.all['tabadr_'+addrs[a]].innerHTML = '<input type="text" size="16" name="addressdescription" value="'+addrs[a]+'">';
+           }
+        }
+   }
+
+   function deleteItem(name) {
+     for (var c in commmts) 
+        if (commmts[c] != '') {
+           if (document.all['tabcmt_'+commmts[c]].style.backgroundColor == selColor) {
+              document.all['tabcmt_'+commmts[c]].innerHTML = "";
+              document.getElementById(commmts[c]).innerHTML = "";
+           }
+        }
+   }
+   function addCItem(name) {  
+     var table = document.all ? // IE
+           document.all[name] :
+           document.getElementById ? // NN6 or other DOM compliant browser
+             document.getElementById(name) : null;
+     if(table) {        
+        var tr =table.rows[0];
+        var tc = tr.insertCell(tr.cells.length);
+        var nid = 'comment_'+tr.cells.length;
+        tc.innerHTML = '<div id="tabcmt_'+nid+'" onclick="showComment('+"'"+nid+"'"+')"><input type="text" size="16" name="commentarydescription" value="'+nid+'"></div>';
+        document.all['commentary'].insertAdjacentHTML('beforeEnd', '<div id="'+nid+'"><textarea rows="3" cols="60" wrap="virtual" name="commentaryvalue"></textarea></div>');
+        commmts = commmts.concat(nid);
+        showComment(nid);
+     }
+   }
+   function editCDescr(name) {
+     for (var c in commmts) 
+        if (commmts[c] != '') {
+           if (document.all['tabcmt_'+commmts[c]].style.backgroundColor == selColor) {
+              document.all['tabcmt_'+commmts[c]].innerHTML = '<input type="text" size="16" name="commentarydescription" value="'+commmts[c]+'">';
+           }
+        }
+   }
+   function showPic(index) {
+       document.getElementById('picture_holder').innerHTML = '<img src="Pictureloader?index='+index+'&folder=@folder@&name=@contact.getName*()*.getLast*()*@&hash=@contact.getName*()*.hashCode*()*@" border="0">';
+   }   
+   function showMap() {
+     for (var a in addrs) 
+        if (addrs[a] != '') {
+           if (document.getElementById('tabadr_'+addrs[a]).style.backgroundColor == selColor) {
+               //alert("Map:"+document.getElementById(addrs[a]).firstChild.value);
+               // todo make this module configurable
+               document.location='http://maps.yahoo.com/maps_result?addr='+escape(document.getElementById(addrs[a]).firstChild.value)+'csz=&country=us';
+           }
+        }
+   }
+</script>
+<div id="title">@label.title@<input type="text" name="title" value="@contact.getTitle*()*@"></div>
+<div id="dob">@label.dob@ <input type="text" name="dob" value="@contact.getDOB*()*?Dlabel.dobformat@">@label.dobformat@</div>
+<div id="picture">
+@label.picture@
+<input type="file" name="picture">
+<div id="picture_holder">
+</div>
+@picture(
+ <div>
+   <img src="Pictureloader?value=@element.getValue*()*@&index=@index@" border="0">
+   @element.getDescription*()*@ <input type="checkbox" name="deletepicture" value="@index@">X
+ </div>
+)@ 
+</div>
+<div id="address">
+  <div class="smallHeader">@label.address@</div>
+  <table id="addresstab" name="addresstab">
+   <tr>
+     @address(<td><div id="tabadr_@element.getDescription*()*@" onclick="showAddress('@element.getDescription*()*@')" ondblclick="editADescr('@element.getDescription*()*@')"> @element.getDescription*()*@<input type="hidden" name="addressdescription" value="@element.getDescription*()*@"></div></td>)@
+    </tr>
+  </table>
+  @address(<div id="@element.getDescription*()*@#adr" style="display:none"><textarea cols="40" rows="4" name="addressvalue">@element.getFormated*()*@</textarea>
+           <a target="_blank" href="http://maps.yahoo.com/maps_result?addr=@:element.street@&csz=@:element.city@,@element.state@+@element.zip@&country=us">@commonlabel.map@</a>
+           </div>)@
+</div>
+<table border="0">
+  <tr>   
+    <td><div class="b-button-g" onClick="addItem('addresstab')">@commonlabel.add@</div></td>
+    <td><div class="b-button-g" onClick="deleteAItem()">@commonlabel.delete@</div></td>
+  </tr>
+</table>
+<div id="commentary">
+ <div class="smallHeader">@label.commentary@</div>
+ <table id="commentarytab" name="commentarytab">
+   <tr> 
+      @commentary(<td><div id="tabcmt_@element.getDescription*()*@" onclick="showComment('@element.getDescription*()*@')" ondblclick="editCDescr('@element.getDescription*()*@')">@element.getDescription*()*@<input type="hidden" name="commentarydescription" value="@element.getDescription*()*@"></div></td>)@
+   </tr>
+ </table>
+ @commentary(<div id="@element.getDescription*()*@#cmt" style="display:none"><textarea cols="60" rows="3" name="commentaryvalue">@element.getValue*()*@</textarea></div>)@
+</div>
+<table border="0">
+  <tr>   
+    <td><div class="b-button-g" onClick="addCItem('commentarytab')">@commonlabel.add@</div></td>
+    <td><div class="b-button-g" onClick="deleteItem('commentarytab')">@commonlabel.delete@</div></td>
+  </tr>
+</table>
+
+

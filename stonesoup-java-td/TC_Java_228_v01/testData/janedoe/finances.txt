@@ -1,0 +1,8 @@
+Income: $5,000/month
+
+Bills:
+    - Power/Gas: $174.32
+    - Internet: $50.00
+    - Television: $120.00
+    - Rent: $1300.00
+    - Car: $720.00

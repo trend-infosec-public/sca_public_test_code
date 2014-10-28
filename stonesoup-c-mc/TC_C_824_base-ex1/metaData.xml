@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+<cwe_entry_id>824</cwe_entry_id>
+<derived_from_id>0</derived_from_id>
+<name>TC_C_824_base-ex1</name>
+<language>C</language>
+<generation_method>base-test-case</generation_method>
+<run_command>Release/TC_C_824_base-ex1 </run_command>
+<build_command>make</build_command>
+<run_directory/>
+<build_directory/>
+<line_count>317</line_count>
+<annotations>
+<name>CROSS_OVERPOINT</name>
+<filename>TC_C_824_base-ex1\src\NewsServer.c</filename>
+<lineNumber>267</lineNumber>
+</annotations>
+<annotations>
+<name>INTERACDTION_POINT</name>
+<filename>TC_C_824_base-ex1\src\NewsServer.c</filename>
+<lineNumber>228</lineNumber>
+</annotations>
+<annotations>
+<name>TRIGGER_POINT</name>
+<filename>TC_C_824_base-ex1\src\NewsServer.c</filename>
+<lineNumber>269</lineNumber>
+</annotations>
+<description/>
+<id>1601</id>
+</project>

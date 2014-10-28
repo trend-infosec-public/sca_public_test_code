@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+<cwe_entry_id>191</cwe_entry_id>
+<derived_from_id>0</derived_from_id>
+<name>ngircd-81</name>
+<language_id>C</language_id>
+<generation_method_id>engineered</generation_method_id>
+<run_command>./src/ngircd/ngircd -n -f ss_ngircd-81.conf</run_command>
+<build_command>make clean;make all</build_command>
+<run_directory>.</run_directory>
+<build_directory>.</build_directory>
+<line_count>10000</line_count>
+<description/>
+<id>1316</id>
+</project>

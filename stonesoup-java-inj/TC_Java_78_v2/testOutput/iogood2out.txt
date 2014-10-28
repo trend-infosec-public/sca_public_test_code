@@ -1,0 +1,12 @@
+HTTP/1.1 403 Forbidden
+Content-Type: text/html; charset=utf-8
+
+<html>
+<head>
+<title>403 - Forbidden</title>
+</head>
+<body>
+<h3>403 - FORBIDDEN</h3>
+<p><strong>Error: </strong>Command is not allowed.</p>
+</body>
+</html>

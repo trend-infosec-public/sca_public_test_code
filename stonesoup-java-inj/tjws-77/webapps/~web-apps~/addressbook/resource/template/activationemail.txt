@@ -1,0 +1,15 @@
+Dear @name@,
+We created an account for you, so you have to just confirm your e-mail address.
+Please click or copy and paste the link in your browser
+     @url@/Emailvalidator?token=@token@&name=@name@&submit.x=1 ,
+and job will be done.
+
+Sincerely,
+Administrator of Web jAddressBook.
+mailto:@AB_MAIL@
+
+You received this message because you requested information from our website, 
+one of our partner websites, sent a SPAM message to our website or through an offline
+publication in the past 12 months. To be removed, please email
+mailto:@AB_MAIL@ and include REMOVE in the Subject. We never share,
+rent, or sell your email address.

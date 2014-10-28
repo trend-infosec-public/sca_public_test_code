@@ -1,0 +1,20 @@
+<!-- $Id: contacts.htm,v 1.4 2005/12/09 01:05:16 drogatkin Exp $  -->
+<table border="0">
+   <tr class="smallheader">
+      <th>X</th>
+      <th onclick="displaySearch('.*','name')">@label.name@</th>
+      <th>@label.email@</th>
+      <th>@label.tphone@</th>
+      <th>@label.chatid@</th>
+   </tr>
+  @entries(
+   <tr>
+      <td><input type="checkbox" name="contact" value="@name.hashCode*()*@_@name.getLast*()*@"></td>
+      <td style="cursor: hand" onclick="editContact('@name.getLast*()*@','@name.hashCode*()*@')"><label for="@name.getLast*()*@_@name.hashCode*()*@">@name@</label></td>
+      <td style="cursor: hand" onclick="sendMail('@email@')">@email@</td>
+      <td>@tphone@</td>
+      <td>@chatid@</td>
+   </tr>
+  )@
+</table>
+

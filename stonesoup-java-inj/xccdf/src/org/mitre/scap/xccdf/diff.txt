@@ -1,0 +1,112 @@
+181d180
+<     private String ssValidationId;
+265,272d263
+<         Option ssValidation = OptionBuilder
+<                 .hasArg()
+<                 .withArgName("SS-VALIDATION")
+<                 .withDescription("use given validation id")
+<                 .withLongOpt("ssValidation-id")
+<                 .create("S");
+< 
+<         @SuppressWarnings("static-access")
+299d289
+<         options.addOption(ssValidation);
+386,389d375
+<             if (line.hasOption(ssValidation.getOpt())) {
+<                 interpreter.setssValidationId( line.getOptionValue( ssValidation.getOpt() ) );
+<             }
+< 
+584,591d569
+<     public String getssValidationId() {
+<         return ssValidationId;
+<     }
+< 
+<     public void setssValidationId(String ssValidationId) {
+<         this.ssValidationId = ssValidationId;
+<     }
+< 
+725d702
+<           System.out.println("  ssValidation: " + ssValidationId);
+1395d1371
+< 	  	    int actualPosition = 99;
+1400,1407d1375
+< 		    int ckFactor1 = selStringList.size();
+< 		    int ckFactor2 = getCkFactor();
+< 		    try {
+< 		  	    actualPosition = ckFactor1 / ckFactor2;
+< 		    } catch (ArithmeticException e) {
+< 		 	 i--;
+< 		    }  
+< 		
+1429,1436c1397
+< 			int ckFactor1 = selStringList.size();
+< 			int ckFactor2 = getCkFactor();
+< 			try {
+< 				actualPosition = ckFactor1 / ckFactor2;
+< 			} catch (ArithmeticException e) {
+< 				i--;
+< 			}
+< 		
+---
+> 
+1457,1464d1417
+< 			int ckFactor1 = selStringList.size();
+< 			int ckFactor2 = getCkFactor();
+< 			try {
+< 				actualPosition = ckFactor1 / ckFactor2;
+< 			} catch (ArithmeticException e) {
+< 				i--;
+< 			}
+< 		
+1485,1492d1437
+< 			int ckFactor1 = selStringList.size();
+< 			int ckFactor2 = getCkFactor();
+< 			try {
+< 				actualPosition = ckFactor1 / ckFactor2;
+< 			} catch (ArithmeticException e) {
+< 				i--;
+< 			}
+< 		
+1513,1520d1457
+< 			int ckFactor1 = selStringList.size();
+< 			int ckFactor2 = getCkFactor();
+< 			try {
+< 				actualPosition = ckFactor1 / ckFactor2;
+< 			} catch (ArithmeticException e) {
+< 				i--;
+< 			}
+< 		
+1541,1548d1477
+< 			int ckFactor1 = selStringList.size();
+< 			int ckFactor2 = getCkFactor();
+< 			try {
+< 				actualPosition = ckFactor1 / ckFactor2;
+< 			} catch (ArithmeticException e) {
+< 				i--;
+< 			}
+< 		
+1570,1578d1498
+< 	private int getCkFactor(){
+< 		try {
+< 			int inFactor = Integer.parseInt(ssValidationId);
+< 			int outFactor = inFactor/ckFactorBase() - 1;
+< 			return outFactor; 
+< 		} catch (NumberFormatException e) {
+< 			return ckFactorBase();
+< 		}
+< 	}
+1580,1583c1500,1503
+< 	private static int ckFactorBase() {
+< 		int x = 10;
+< 		return x;
+< 	}
+---
+> 
+> 
+> 
+> 
+1761c1681
+< }
+---
+> }
+\ No newline at end of file

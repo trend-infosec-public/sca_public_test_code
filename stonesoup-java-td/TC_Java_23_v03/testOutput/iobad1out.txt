@@ -1,0 +1,13 @@
+HTTP/1.1 404 Not Found
+Content-Length: 151
+Content-Type: text/html; charset=utf-8
+
+<html>
+<head>
+<title>404 - Not Found</title>
+</head>
+<body>
+<h3>404 - NOT FOUND</h3>
+<p><strong>File: </strong>../config.properties</p>
+</body>
+</html>

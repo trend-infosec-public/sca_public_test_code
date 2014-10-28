@@ -1,0 +1,7 @@
+#!/bin/sh
+cd ../testData
+java -classpath ../bin stonesoup.FTPServer &
+
+
+
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<io_pair>
+  <description>The file output.txt is created and should match badOutput.txt</description>
+  <id>931</id>
+  <io_pair_category>bad</io_pair_category>
+  <name>TC_C_129_1111_bad</name>
+  <platform>WINDOWS</platform>
+  <technical_impact>READ_APPLICATION_DATA</technical_impact>
+  <timeout_execute>10</timeout_execute>
+  <io_groups>
+    <io_group>
+      <co_process xsi:nil="true"/>
+      <io_parameters>
+        <io_parameter>
+          <feature>registry_contents</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>HKEY_CURRENT_USER\Software\STONESOUP\BufIndex</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+            <io_value>
+              <order>2</order>
+              <val>InputData</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+            <io_value>
+              <order>3</order>
+              <val>1000</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+        <io_parameter>
+          <feature>command_line</feature>
+          <order>2</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>1200 -3709 3</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+    <io_group>
+      <co_process xsi:nil="true"/>
+      <io_parameters>
+        <io_parameter>
+          <feature>file_contents_o</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>3Output.txt</val>
+              <val_type>USE_CONTENTS_OF_FILE</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+  </io_groups>
+</io_pair>

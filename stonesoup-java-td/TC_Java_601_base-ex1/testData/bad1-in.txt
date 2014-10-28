@@ -1,0 +1,1 @@
+action=redir&arg1=http%3A%2F%2Fwww.example.com%2Fphishing.html

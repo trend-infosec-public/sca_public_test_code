@@ -1,0 +1,6 @@
+Content-type: text/html
+Status: 302 Found
+Location: local.html
+
+You have been redirected.
+

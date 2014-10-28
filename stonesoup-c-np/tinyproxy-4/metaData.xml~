@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+<cwe_entry_id>274</cwe_entry_id>
+<derived_from_id>0</derived_from_id>
+<name>tinyproxy-4</name>
+<language_id>2</language_id>
+<generation_method_id>4</generation_method_id>
+<run_command>./src/tinyproxy -d -c ss_tinyproxy-4.conf</run_command>
+<build_command>make clean;make all</build_command>
+<run_directory>.</run_directory>
+<build_directory>./src</build_directory>
+<line_count>7956</line_count>
+<description/>
+<id>1313</id>
+</project>

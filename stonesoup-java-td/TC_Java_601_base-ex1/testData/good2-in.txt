@@ -1,0 +1,1 @@
+action=redir&arg1=local.html

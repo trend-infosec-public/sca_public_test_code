@@ -1,0 +1,17 @@
+<html>
+<title>Unexpected error</title>
+<body>
+<!-- $Id: unexpectederror.htmp,v 1.2 2005/12/17 07:28:09 drogatkin Exp $ -->
+<h2>Error: <font color="red">@error@</font></h2>
+<pre>
+@tracelog@
+</pre>
+<p>
+@servlet@
+<p>
+<a href="@referer@">continue</a>
+<p align="center" style="font-family: Arial; color: #808080; font-size: 8pt">
+jAddressBook Copyright &copy; 2005 Dmitriy Rogatkin
+</p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+File: identity.txt
+Owner: janedoe
+Size: xxx
+---------- FILE BEGIN ----------
+Total bytes read > 100
+----------  FILE END  ----------
+File: -la
+Owner: janedoe
+Size: xxx
+---------- FILE BEGIN ----------
+Total bytes read > 100
+----------  FILE END  ----------

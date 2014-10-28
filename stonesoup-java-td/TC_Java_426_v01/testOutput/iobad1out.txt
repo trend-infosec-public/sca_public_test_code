@@ -1,0 +1,13 @@
+HTTP/1.1 500 Internal Server Error
+Content-Length: 302
+Content-Type: text/html; charset=utf-8
+
+<html>
+<head>
+<title>HTTP 500 - Internal Server Error</title>
+</head>
+<body>
+<h3>HTTP 500 - Internal Server Error</h3>
+<p><strong>Details: </strong>An error occured during processing.  Cannot run program "cgi-bin/cgi_exec.sh": java.io.IOException: error=2, No such file or directory</p>
+</body>
+</html>

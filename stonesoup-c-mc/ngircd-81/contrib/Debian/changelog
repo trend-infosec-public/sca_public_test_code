@@ -1,0 +1,143 @@
+ngircd (0.8.1-0ab1) unstable; urgency=low
+
+  * New "upstream release".
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Sat, 25 Dec 2004 01:18:32 +0100
+
+ngircd (0.8.0-0ab2) unstable; urgency=low
+
+  * Added missing commas to debian control file, fixes bug #56.
+    Thanks to Kevin Otte.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Thu, 15 Jul 2004 10:53:39 +0200
+
+ngircd (0.8.0-0ab1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Sat, 26 Jun 2004 11:25:59 +0200
+
+ngircd (0.7.7+HEAD-0ab5) unstable; urgency=low
+
+  * Updates from CVS HEAD branch, most notably: "INVITE- and BAN-lists
+    become synchronized between IRC+ servers when establishing new
+    connections, if the peer supports this as well."
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Mon, 26 Apr 2004 01:53:15 +0200
+
+ngircd (0.7.7+HEAD-0ab4) unstable; urgency=low
+
+  * This version includes fixes for INVITE command and the handling of the
+    invite and ban lists from CVS-HEAD.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Fri,  9 Apr 2004 23:55:13 +0200
+
+ngircd (0.7.7+HEAD-0ab3) unstable; urgency=low
+
+  * Included MODE fix from CVS-HEAD branch.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Mon,  5 Apr 2004 13:09:24 +0200
+
+ngircd (0.7.7+HEAD-0ab2) unstable; urgency=low
+
+  * Incorporated more fixes and enhancements of CVS-HEAD version,
+    e. g. better connection logging and fixed TRACE command.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Sat, 28 Feb 2004 03:20:32 +0100
+
+ngircd (0.7.7+HEAD-0ab1) unstable; urgency=low
+
+  * New upstream version. This debian package includes all features of
+    ngIRCd 0.7.7 and changes of the CVS-HEAD development tree.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Thu,  5 Feb 2004 15:23:22 +0100
+
+ngircd (0.7.6+HEAD-0ab2) unstable; urgency=low
+
+  * Included new fixes and additions from the CVS-HEAD upstream branch,
+    e. g. the setting of type of service (TOS) on sockets.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Mon, 26 Jan 2004 04:05:41 +0100
+
+ngircd (0.7.6+HEAD-0ab1) unstable; urgency=low
+
+  * Included all changes from the CVS-HEAD upstream version.
+  * Restructured debian packaging system: now there are two packages, a
+    "standard" version that includes all the default options and a "full"
+    version that additionally includes support for TCP wrappers and IDENT
+    lookups.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Thu,  1 Jan 2004 23:12:11 +0100
+
+ngircd (0.7.6-0ab1) unstable; urgency=medium
+
+  * New upstream version.
+  * Changed version numvering scheme of debian package.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Fri,  5 Dec 2003 14:26:41 +0100
+
+ngircd (0.7.5-0.2ab) unstable; urgency=low
+
+  * Updated RPM and Debian package description and configuration.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Sat, 29 Nov 2003 21:24:32 +0100
+
+ngircd (0.7.5-0.1ab) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Fri,  7 Nov 2003 21:59:58 +0100
+
+ngircd (0.7.1-0.1ab) unstable; urgency=low
+
+  * New upstream version :-)
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Fri, 18 Jul 2003 22:53:02 +0200
+
+ngircd (0.7.0-0.7ab) unstable; urgency=low
+
+  * Fixed up post installation script (added interpreter, fixed chmod call).
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Sun, 13 Jul 2003 00:52:38 +0200
+
+ngircd (0.7.0-0.6ab) unstable; urgency=low
+
+  * Added /etc/default/ngircd.
+  * Included own post installation script.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Sat, 12 Jul 2003 20:31:09 +0200
+
+ngircd (0.7.0-0.5ab) unstable; urgency=low
+
+  * Enhanced init script.
+  * Included NJOIN fix from actual CVS "HEAD" branch.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Wed,  9 Jul 2003 22:40:49 +0200
+
+ngircd (0.7.0-0.4ab) unstable; urgency=low
+
+  * Reverted use of dh_installexamples.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Thu, 22 May 2003 00:15:03 +0200
+
+ngircd (0.7.0-0.3ab) unstable; urgency=low
+
+  * Removed "debian/docs" and "debian/conffiles"; debhelper takes care of
+    this for us automagically.
+  * Excluded "etc/ngircd.conf" from dh_fixperms.
+
+ -- Alexander Barton <alex@Arthur.Ath.CX>  Wed, 21 May 2003 23:25:05 +0200
+
+ngircd (0.7.0-0.2ab) unstable; urgency=low
+
+  * Fixed wrong variable substitution in init script.
+  * Added some CVS "Id-Tags" (but not checked in, yet).
+  * Removed own "Provides:" from control file.
+
+ -- Alexander Barton <alex@barton.de>  Wed, 21 May 2003 12:32:34 +0200
+
+ngircd (0.7.0-0.1ab) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Alexander Barton <alex@barton.de>  Wed, 21 May 2003 02:36:52 +0200

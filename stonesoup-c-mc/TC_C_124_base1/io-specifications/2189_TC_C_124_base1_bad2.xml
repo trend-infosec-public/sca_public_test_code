@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<io_pair>
+  <description>A DNS entry longer than 20 characters.</description>
+  <id>2189</id>
+  <io_pair_category>bad</io_pair_category>
+  <name>TC_C_124_base1_bad2</name>
+  <platform>BOTH</platform>
+  <technical_impact>MODIFY_APPLICATION_DATA</technical_impact>
+  <timeout_execute>10</timeout_execute>
+  <io_groups>
+    <io_group>
+      <co_process>SetupTFTPSocketC hamlet.txt localhost -a 192.168.70.85</co_process>
+      <io_parameters/>
+    </io_group>
+    <io_group>
+      <co_process xsi:nil="true"/>
+      <io_parameters>
+        <io_parameter>
+          <feature>stdout_terminal_o</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+70-85.bigtelcom1.ca
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA192-168-70-85.bigtelcom1.ca</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+  </io_groups>
+</io_pair>

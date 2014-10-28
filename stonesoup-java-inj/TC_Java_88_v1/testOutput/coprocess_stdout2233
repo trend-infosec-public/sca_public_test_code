@@ -1,0 +1,6 @@
+File: -la && cat /etc/passwd > data.txt
+Owner: johndoe
+Size: xxx
+---------- FILE BEGIN ----------
+Total bytes read > 100
+----------  FILE END  ----------

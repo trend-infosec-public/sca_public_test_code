@@ -1,0 +1,3 @@
+:stony!~stony@localhost JOIN :#StonesoupChannel
+:stony!~stony@localhost PRIVMSG stony : Hey buddy how are you?
+:stony!~stony@localhost PRIVMSG stony : Stony is doing ok and maybe doing well?

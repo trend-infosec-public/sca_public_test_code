@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<io_pair>
+  <description>A new directory 'ShouldNotBeHere' is created and input3Out.txt is saved into it</description>
+  <id>881</id>
+  <io_pair_category>bad</io_pair_category>
+  <name>BTC_C_785_2_bad</name>
+  <platform>BOTH</platform>
+  <technical_impact>MODIFY_FILES</technical_impact>
+  <timeout_execute>10</timeout_execute>
+  <io_groups>
+    <io_group>
+      <co_process xsi:nil="true"/>
+      <io_parameters>
+        <io_parameter>
+          <feature>command_line</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>encrypt input.txt input3Out.txt ShouldNotBeHere 65563</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+    <io_group>
+      <co_process xsi:nil="true"/>
+      <io_parameters>
+        <io_parameter>
+          <feature>file_name_o</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>input3Out.txt</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+  </io_groups>
+</io_pair>

@@ -1,0 +1,2 @@
+Target /%2Fetc%2Fpasswd
+Total bytes read > 100

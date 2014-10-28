@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<io_pair>
+  <description xsi:nil="true"/>
+  <id>1220</id>
+  <io_pair_category>good</io_pair_category>
+  <name>tinyproxy-4-good-1</name>
+  <platform>LINUX</platform>
+  <technical_impact>NONE</technical_impact>
+  <timeout_execute>60</timeout_execute>
+  <io_groups>
+    <io_group>
+      <co_process>./ss_run_tests.sh ssTestRes.txt</co_process>
+      <io_parameters/>
+    </io_group>
+    <io_group>
+      <co_process xsi:nil="true"/>
+      <io_parameters>
+        <io_parameter>
+          <feature>file_contents_o</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>ssTestRes.txt</val>
+              <val_type>USE_CONTENTS_OF_FILE</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+  </io_groups>
+</io_pair>

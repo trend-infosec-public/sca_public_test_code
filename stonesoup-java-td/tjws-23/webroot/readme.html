@@ -1,0 +1,390 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Miniature Java Web Server</title>
+<!-- $Id: readme.html,v 1.29 2006/01/11 06:42:34 drogatkin Exp $ -->
+<style>
+<!--
+.quotes      { font-family: Arial; font-size: 8pt }
+-->
+</style>
+</head>
+
+<body bgcolor="#D1E9FE">
+
+<h2 align="center">Tiny Java Web Server and Servlet Container</h2>
+
+<p align="center">aka Miniature WS</p>
+
+<p align="center"><i>(with security update, J2EE deployment, and JSP)</i></p>
+
+<p align="left"><i><a href="#download">Download</a></i><a href="http://www.java.net"><img src="http://today.java.net/images/javanet_button_90.gif"></a></p>
+<p>The Miniature Java Web Server includes most of functionality of real Web
+Servers including running servlets. The server is pretty small as in Java code
+as in result byte code. General&nbsp; purpose of the Web server is running and
+debugging servlets. However, if you host not so high loaded web site, you can use the server
+as a regular web server with some benefits against big brothers. I found also
+very convenient to ship a servlet based product including this server, as a user
+can start a product just after unwrapping. You can try a <a href="http://7bee.j2ee.us/" target="_blank">web
+site</a> hosted on this server under Linux. This web server works also on PDA like Sharp
+Zaurus LS5xxx, or on Windows CE based handhelds when JVM installed. It gives additional flexibility for your PDA, since using file
+upload and download servlet can simplify file synchronization and provide
+control of your PDA from web.</p>
+<table border="0" width="100%" id="table1" cellpadding="3">
+	<tr>
+		<td width="148" bgcolor="#99CCFF" valign="top">
+		<h3>Testimonies</h3>
+		<p class="quotes">Using tjws with WebServices as a &quot;RMI&quot;/RPC protocol, and with 
+		HTTPS on<br>
+		top, this is gold! Thanks! </p>
+		<p class="quotes">I've downloaded
+		TJWS and it looks like 
+		exactly what I’ve been looking for to use as a local web server to 
+		generate a web application. 
+		<p class="quotes">I'm using the miniature java webserver on<br>
+		my zaurus.<br>
+		I wrote a few servlets for it and I'm very happy with how it performs.</td>
+		<td>
+<h3>History</h3>
+<p>Something in the end of 1998 I needed a web server with sources to debug some servlets, so
+I started used ACME Java Web Server. It was pretty good, expect supporting only
+JSDK 1.x and JDK 1.02. Since my servlets required a bit more, I have added
+support for contemporary versions of JDK and JSDK. Then I just continued adding
+more features and bug fixes. The current version is mostly
+compatible with the latest servlet container&nbsp; specification (2.4).&nbsp;</p>
+<h3>Benefits</h3>
+<ul>
+  <li>About 60Kb footprint (almost smallest one, TJWS has almost
+    5 times less footprint comparing to competitors <a href="http://www.gefionsoftware.com/" target="_blank">LWS</a>
+    and <a href="http://jetty.mortbay.org/jetty/index.html" target="_blank">Jetty</a>, 
+	more than twice less than <a href="http://winstone.sourceforge.net">Winstone</a>)</li>
+  <li>Very fast and reliable, it performs better than some C/C++ based web
+    servers</li>
+  <li>Can scale to thousands connection, clustering configuration is about of
+    development</li>
+  <li>Perfect solution for web interfaced applications</li>
+  <li>Standard J2EE servlet deployment for .war packaged servlets</li>
+	<li>Simple configuration, no hundreds of config parameters</li>
+  <li>JSP</li>
+</ul>
+		<p>&nbsp;</td>
+	</tr>
+</table>
+<h3>Is it real 2.4?</h3>
+<p>Most of servlet specification 2.4 features are available for J2EE deployed servlets. 
+Selecting or not J2EE deployment&nbsp; gives extra flexibility to develop very small servlets using 
+minimum of 2.4 servlet specification. In this case a separate module for J2EE deployment and JSP scan 
+be dropped
+(about 46Kb footprint).&nbsp; It's an ideal for embedded system. Note that&nbsp; JSP support is provided by GNU JSP. This
+version can be outdated, however TJWS can easily adopt any newer JSP provider.</p>
+<h3>Supported web.xml deployment tags</h3>
+<ul>
+  <li>context-param - yes</li>
+  <li>filter - yes</li>
+  <li>filter-mapping - yes</li>
+  <li>listener - yes</li>
+  <li>servlet - yes</li>
+  <li>servlet-mapping - yes</li>
+  <li>session-config - pending</li>
+  <li>mime-mapping - yes</li>
+  <li>welcome-file-list - yes</li>
+  <li>error-page - yes</li>
+  <li>taglib - maybe</li>
+  <li>resource-env-ref - maybe</li>
+  <li>resource-ref - maybe</li>
+  <li>security-constraint - maybe</li>
+  <li>login-config - maybe</li>
+  <li>security-role - maybe</li>
+  <li>env-entry - maybe</li>
+  <li>ejb-ref - no</li>
+  <li>ejb-local-ref - no</li>
+</ul>
+<h3>2.5 Deployment descriptor</h3>
+<p>2.5 specification introduced in Glassfish project looks interesting, so there 
+is a plan to add 2.5 capabilities. </p>
+<h3>Application with Web UI</h3>
+<p>Recently, a new type of application appeared on market. You need to start an
+application and it will launch a web browser which will represent UI of
+the&nbsp; application. This approach has many advantages and becomes more widely used. The
+Miniature Java Web Server is right tool to creation such kind of application. <a href="download/ChatHouse.zip">Download</a>
+and unzip the archive and double click JAR in explorer or start shell script,
+then point browser to <a href="http://localhost:81">http://localhost:81</a> and
+enjoy the web interfaced application. (If you are on Unix, you need to have privileges
+to use port 81 or just change it to 80xx in cmd file). Note, that such kind of
+applications are also built on base heavily using JavaScript and ActiveX
+controls without actual web server, however such approach isn't secure and
+platform dependent.</p>
+<h3>How To?</h3>
+<p>Configuration of MJWS is fairly simple and based on properties files. You can
+use standard J2EE deployment of web applications. In this case you need to make
+sure that war.jar is presented in classpath when you start the server. It will
+create webapps directory where you can put your .war files for deployment. J2EE
+deployer is quite simplistic and there is no server.xml file yet. However, set
+of supported tags of web.xml is quite comprehensive.&nbsp;</p>
+<h4>Command line parameters</h4>
+<p>All command line parameters start with '-' (dash) and most of them have a value
+part. Here they are:</p>
+<p><b>p</b> - specifies port number served by TJWS, default value is 80 for non secure
+and 443 for secure configuration, for example -p 8080</p>
+<p><b>t</b> - specifies name of throttles definition file. It allows to reduce
+speed accessing to particular files and improve overall performance of a server.
+An example of this file can look like:</p>
+<table bgcolor="#C0C0C0">
+<tr><td>
+<code><pre>
+# throttle file for tjws.sourceforge.net
+   *               100000  # limit total web usage to 2/3 of our T1
+   *.jpg|*.gif     50000   # limit images to 1/3 of our T1
+   *.mpg           20000   # and movies to even less
+   mediachest/*    20000   # MediaChest's pages are too popular
+</pre></code>
+</td></tr>
+</table>
+<p><b>s</b> - specifies servlet properties file in old Sun's legacy form. An example of
+this file can look like:</p>
+<table bgcolor="#C0C0C0">
+<tr><td>
+<code><pre>servlet./app-bin/tree.code=rogatkin.servlet.Dispatcher
+servlet./app-bin/tree.initArgs=properties=src\javaarchitect\servlet\treeview.properties
+servlet./app-bin/chat.code=rogatkin.chatservlet.ChatServlet
+servlet./app-bin/chat.initArgs=properties=C:\\Projects\\ChatServlet\\chatservlet.properties
+servlet./app-bin/lunch.code=javaarchitect.servlet.mishka.Friday
+servlet./app-bin/lunch.initArgs=properties=src\javaarchitect\servlet\mishka.properties
+</pre></code>
+</td></tr>
+</table>
+<p><b>r</b> - specifies realm file. A format of this file looks like:</p>
+<code><pre>realmname=path,user:password</pre></code>
+<p><b>a</b> - specifies aliases definition file, for example:</p>
+<table bgcolor="#C0C0C0">
+<tr><td>
+<code><pre>from=/;dir=src\javaarchitect\servlet\tree\resource
+from=/pool;dir=data</pre></code>
+</td></tr>
+</table>
+<p><b>b</b> - bind address, if your server has several IP addresses, then you can
+specify which one to use.</p>
+<p><b>k</b> - backlog size, by default 50, but can't be less than 2.</p>
+<p><b>nohup</b> - server doesn't expect any terminal window, can be only killed to
+stop.</p>
+<p><b>c</b> - specifies CGI scripts location.</p>
+<p><b>e</b> - provides session timeout in minutes and can be negative. Negative value
+won't start session cleaning thread and will use persistent session cookie.</p>
+<p><b>l</b>[<b>ar</b>] - specifies to log accesses with optionally logged user-<b>a</b>gent and
+<b>r</b>eferer HTTP headers.</p>
+<p><b>w</b> - provides web app deployer class name, by default used r<i>ogatkin.web.WarRoller</i></p>
+<p><b>j</b> - JSP servlet class, <i> org.gjt.jsp.JSPServlet</i> is default</p>
+<p><b>nka</b> - no keep alive (server uses keep-alive by default)</p>
+<p><b>kat</b> - keep alive timeout interval in seconds, default is 30</p>
+<p><b>mka</b> - max number of use a connection in keep-alive</p>
+<p><b>nsp</b> - no persistence for sessions (can be useful if sessions contain 
+sensitive or bulky data)</p>
+<p><b>err</b> - allows to use own or standard error print stream. If there is no 
+following parameter class name then used <i>System.err</i> as error print 
+stream. If a parameter specified, then it's considered as a class name 
+compatible for assignment to <i>PrintStream.</i> Such class will be instantiated 
+and used for error redirection.</p>
+<p><b>socketFactory</b> - specifies class name of socket factory and used for setting
+secure connection.</p>
+<p>It accepts also any freely specified options in form -option_name option_value.
+Such options passed without checking to custom server socket factory
+implementation.</p>
+<h3>Running it as a service on NT/2000/XP</h3>
+<p>You can run the latest version of the server (&gt;1.42/1.7)&nbsp; as NT service. File
+<b>servservice.exe</b> added to the distribution. I wrote this service for JDK
+1.4. However, if somebody needs it to run on lower versions of JDK and has
+problems, then get sources from <a href="http://cvs.sourceforge.net/viewcvs.py/tjws/tjws/servservice/" target="_blank">CVS</a>,
+modify, and compile them,
+The NT service starter considers that all TJWS files reside in the same
+directory specified at installation of the service. .jar files can be in sub
+directory <i>lib</i>. Command line parameters have to be specified in <i>cmdparams</i>
+file. To get help line, run <font face="Courier New" size="2">servservice.exe
+-help</font>. Parameterless version of servservice.exe&nbsp; is considered as a
+service.</p>
+<p>Note that arg[0] on some versions Windows doesn't contain fully specified
+path to an executable, so you need to specify it as a parameter at installation.
+So, there is no requirements to have <b>servservice.exe</b> in the same
+directory where TJWS is.</p>
+<h3>Run it on Zaurus</h3>
+<p>Zaurus version of the web server is JDK 1.1 compatible and distributed in a
+separate archive. Unzip distributive to CF card. Directory <i> ws</i> should be created.
+Insert the card to Zaurus and run terminal window. Type <b> cd /mnt/cf/ws</b>, then
+<b>./ws.sh</b>.
+After few second you can see message on screen that the server is running on
+port 8080. Run opera and select URL <a href="http://localhost:8080">http://localhost:8080</a>.
+You should see a web page. Select URL <a href="http://localhost:8080/app/">http://localhost:8080/app/</a>,
+then you should be able to browse your Zaurus file system. When your Zaurus
+connected to host PC over USB cradle or Wi-Fi card, you should be able to access
+this server remotely from PC browser using your Zaurus IP address. Mark this
+page for upcoming cool servlets. You can also try .ipk installation package,
+however it isn't tested well and no way to stop it unless using kill. You can
+try also the not Zaurus adopted version of the server on Zaurus, since Zaurus'
+Java has support of collection classes introduced in JDK 1.2.</p>
+<h4>Hints to compile Zaurus version</h4>
+<p>I use cross compilation with the latest version J2SDK, to make sure that
+result version will run on Zaurus the following compilation options used:</p>
+<p><font face="Courier" size="2">-source 1.1 -target 1.1 -bootclasspath &quot;<a href="file:///C:/Program%20Files/Java/j2re1.1/lib/core.jar">C:\Program
+Files\Java\j2re1.1\lib\core.jar</a>;<a href="file:///C:/Program%20Files/Java/j2re1.1/lib/core.jar">C:\Program
+Files\Java\j2re1.1\lib\classes.jar</a>&quot;</font></p>
+<p>Note that core.jar extracted from Zaurus and classes.jar is system classes
+from J2SDK 1.1.8.</p>
+<h3>Note for OpenZaurus users</h3>
+<p>If you use this server running on original Zaurus OS (it's good idea to
+run&nbsp; home
+web site to save some electricity) and going to update your version to
+OpenZaurus 3.x,
+then do not forget to extract Jeode. Supplied kaffe for OpenZaurus is quite
+unstable and you can lose possibility to run this web server on it.&nbsp;Good
+instructions how to move Jeode from Zaurus OS to OpenZaurus you can find <a href="http://www.uk-dave.com/tutorials/zaurus/java-oz.shtml">here</a>.</p>
+<h3>FAQ (Zaurus)</h3>
+<p>I got some flow of questions regarding Zaurus version and running servlets on
+it, so I decided to provide short FAQ.</p>
+<p>Q: When I try to reach my servlet of Zaurus using <a href="http://localhost/MyServlet">http://localhost/MyServlet</a>.class
+I'm getting page not found error, what can be wrong?</p>
+<p>A: Most frequent cause of this problem, that you need to add a servlet
+definition in servlet .properties file and add a reference to this file to a
+start script using key -s.</p>
+<p>Q: I created servlet.properties file and add MyServlet to it, but I am still
+not getting the servlet running, what can be a cause?</p>
+<p>A: You probably forgot to add your servlet classes location in class path in
+a start script of a server.</p>
+<h3>Security</h3>
+<p>Security becomes more important nowadays, so I decided to add SSL support to
+MJWS. Thanks JSSE that makes that fairly easy. Here some tips how to install SSL
+support to the server.</p>
+<ul>
+  <li><i>Download JSSE from Sun's website or use JDK1.4/5 including this extension.</i></li>
+  <li><i>Generate certificate using command like: keytool -genkey -keypass 123456 -storepass 123456<br>
+    Read more detail in keytool documentation when you need a certificate signed
+    by CA. Tomcat's how-to for SSL can be useful also.</i></li>
+  <li><i>Add in a command line for starting MJWS option:&nbsp; -socketFactory Acme.Serve.SSLServerSocketFactory<br>
+    You can also specify more options for SSL server factory as keystore
+    location, password and others. See for details in source code of
+    SSLServerSocketFactory.</i></li>
+</ul>
+<p>Here is a list of free options for secure socket:</p>
+<ol>
+	<li><u>algorithm</u> - encryption algorithm, SUNX509 when not specified</li>
+	<li><u>clientAuth</u> - requires client authorization, false when not 
+	specified</li>
+	<li><u>keystoreFile</u> - key store file path, user_home/.keystore by 
+	default</li>
+	<li><u>keystorePass</u> - key store password, empty string when not 
+	specified</li>
+	<li><u>keystoreType</u> - type of key store, Sun's JKS when not specified</li>
+	<li><u>protocol</u> - secure protocol, TLS when not specified</li>
+	<li><u>backlog</u> - backlog value, 1000 by default</li>
+	<li><u>ifAddress</u> - bind to specified address</li>
+	<li><u>port</u> - bind to specified port</li>
+</ol>
+<p>Note that some secure socket options will override options specified in 
+common way.</p>
+<h3>Help wanted</h3>
+<p>I'm looking for a developer to finish work on pending web.xml instructions and also
+adding tag library support. Next step can be adding EJB support as well.</p>
+<h3><a name="download"></a>Download</h3>
+<p>Please 
+<a href="http://prdownloads.sourceforge.net/tjws/WebServer-113.zip?download">download</a> 
+(version 1.13 updated on 
+<!--webbot bot="Timestamp" S-Type="EDITED"
+S-Format="%m/%d/%Y" startspan -->01/10/2006<!--webbot bot="Timestamp" endspan i-checksum="12498" -->
+) </p>
+<p><font color="#800000">Note:</font> Base TJWS is Java 2 (JDK 1.2) compatible, SSL 
+module requires extra classes introduced in JDK 1.3-1.4. J2EE war deployment 
+requires Java 5 (JDK 1.5 or 1.6). If you would like to build
+a version, then you will need to
+<a href="http://7bee.j2ee.us/download/bee-1.0.2.zip">download</a>
+<font size="5"><b>7</b></font><b><font size="5">bees</font></b>  <a href="http://7bee.j2ee.us/bee/index-bee.html" target="_blank">Java
+based build tool</a>. env.xml assumes target 1.4 for TJWS and 1.5 for the 
+rest. It may need editing to provide SDK paths and targets. Since a build tool is matter of personal taste, you can
+use any other favorite build tools.&nbsp;</p>
+<p>Since this project is in a stage of
+adding new features, you can get them faster when checking out the latest code from CVS.</p>
+<p>Zaurus version <a href="http://prdownloads.sourceforge.net/tjws/WebServerZaurus.zip?download">get here</a> and <a href="http://prdownloads.sourceforge.net/tjws/wsz_1.0_arm.ipk?download">.ipk
+version</a> (use kill to stop)</p>
+<h5>Last changes history</h5>
+<ul>
+  <li><font size="2">nohup opttion added</font></li>
+  <li><font size="2">getSession() never <b>null</b> fix pointed by Warren E. Downs</font></li>
+  <li><font size="2">most of 2.4 done, fixed messed sessions when
+    browser sends more than one session cookie</font></li>
+  <li><font size="2">session persistence between server re-runs (here are some 
+	issues when classes loaded under WEB-INF/..)</font></li>
+  <li><font size="2">fixes realm not got applied to servlets, hanging when
+    accessed reserved device, like con:, prt: pointed by users (Niel Markwick,
+    and others)</font></li>
+  <li><font size="2">added J2EE web app deployment and JSP
+    support (GNU JSP) as a separate module&nbsp;</font></li>
+  <li><font size="2">support of filters and listeners, requested by Argan</font></li>
+  <li><font size="2">keep-alive support, requested by Torben Bruun</font></li>
+	<li><font size="2">err option to keep System.err unchanged or customize it, 
+	requested by </font><font face="Arial" size="2">
+	<span style="font-size: 10pt; font-family: Arial;">Xavier</span></font> </li>
+	<li><font size="2">many keep-alive fixes came from </font><b><font size="2">
+	Martin Egholm Nielsen</font></b></li>
+	<li><font size="2">fixes in web app servlet most reported by Nicolas Prochazka</font></li>
+</ul>
+<h3>Attention users of 2.4-2.5 features</h3>
+<p>J2EE deployment and web.xml processing were added recently, so some bugs 
+excepted. Do not hesitate to report any problems. Your reports help to keep the 
+server in a good shape. I encourage you to try all your web applications on TJWS.</p>
+<h3>Version tracking notes</h3>
+<p>After rechecking sources in sourceforge CVS repository, all version numbers
+restarted. So, all mentions of versions below are related to versions maintained in my CVS
+repository.&nbsp;</p>
+<h3>CVS</h3>
+<p>CVS is hosted for the project, so you can always get latest sources from <a href="http://cvs.sourceforge.net/viewcvs.py/tjws/tjws/" target="_blank">there</a>.</p>
+<h3>J2SDK 1.5</h3>
+<p>Starting from version 1.50 new 1.5 Java language features used. Zaurus
+version stopped for support.</p>
+<h3>Build Tool</h3>
+<p>Starting from version 1.53 the project uses <b>7bee</b> as a building tool.
+You can freely download <b> 7bee</b> <a href="http://7bee.j2ee.us/bee/index-bee.html" target="_blank">from
+here</a>. You can still use old batch/script files, however they are removed from the
+current archive and not supported anymore.</p>
+<h3>Sources</h3>
+<p>Although a distributed archive includes all source, you can always get the
+latest from <a href="http://sourceforge.net/cvs/?group_id=35209" target="_blank">CVS</a>..</p>
+<h3>Copyrights</h3>
+<p>The Miniature Java Web Server carries all copyrights of the original author
+as stated in the license you can find in any source file.</p>
+<h3>License</h3>
+<p>The Miniature Java Web Server inherited BSD like license from the original
+code, check any source file for details. Note, that the server is completely
+free and no any donations ever asked. Recently I traveled to Asia and found that
+asking for donation is kind of Asian business, when people initially offer some
+services for free, and then asking for money. So every free service has hidden
+obligation for paying for it.&nbsp;&nbsp;</p>
+<h3>Support</h3>
+<p>I do not provide as free as paid support for the server. However, you are
+always welcome to send a bug report, or an enhancement request.</p>
+<h3>Extra Bonus</h3>
+<p>Version of 1.7 and later include some useful web applications packaged as
+.war files and deployed at first server run. To enjoy the applications just
+follow a link on start page. If you do not want to have these applications
+deployed, just remove corresponding .war files from <i>webapps</i> directory
+before first server run.</p>
+<h3>Check also..</h3>
+<p><a href="http://mediachest.sourceforge.net">Comprehensive tools to handle all media files as digital photos and&nbsp; music</a></p>
+<p><a href="http://xbox.sourceforge.net">xBox - Bean box supporting XML serialization
+</a> (do not confuse with proposed
+later <b>java.beans.Encoder</b>)</p>
+<p><a href="http://jaddressbook.sourceforge.net">jAddressBook</a> is an address
+book with float XML format of addresses and another profile information</p>
+
+<h3>Contact</h3>
+<p>Bugs, questions, and enhancement requests you can send to 
+<a href="mailto:jAddressBook@gmail.com">Dmitriy
+Rogatkin</a>. I hope you enjoy using this server.</p>
+<p>
+<p>
+<P ALIGN=CENTER>
+<a href="http://mediachest.sourceforge.net"><IMG SRC="http://7bee.j2ee.us/demo-servlets/signature/please/" NAME="Graphic3" ALIGN=BOTTOM BORDER=0></a></P>
+
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+PRIVMSG stony : Hey buddy how are you?
+PRIVMSG stony : Stony is doing ok and maybe doing well?
+QUIT
+

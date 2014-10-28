@@ -1,0 +1,10 @@
+The IO pairs use:
+TC_C_120_Registry_Good1
+TC_C_120_Registry_Good2
+TC_C_120_Registry_Good3
+TC_C_120_Registry_Good4
+and
+TC_C_124_Registry_fishGood
+TC_C_124_Registry_frogGood
+TC_C_124_Registry_Bad1
+TC_C_124_Registry_Bad2

@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Date: Tue, 08 Nov 2011 18:14:19 GMT
+Server: Apache/2.2.3 (Red Hat)
+Last-Modified: Thu, 03 Nov 2011 18:14:50 GMT
+ETag: "3c8391-1f-90773a80"
+Accept-Ranges: bytes
+Content-Length: 31
+Connection: close
+Content-Type: text/html; charset=UTF-8
+
+STONESOUP test Apache homepage

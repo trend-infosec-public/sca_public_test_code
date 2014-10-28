@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<io_pair>
+  <description>A bad bitmap that causes and error and printing of extra information.</description>
+  <id>2198</id>
+  <io_pair_category>bad</io_pair_category>
+  <name>TC_C_170_v1025_bad2</name>
+  <platform>BOTH</platform>
+  <technical_impact>READ_APPLICATION_DATA</technical_impact>
+  <timeout_execute>10</timeout_execute>
+  <io_groups>
+    <io_group>
+      <co_process xsi:nil="true"/>
+      <io_parameters>
+        <io_parameter>
+          <feature>command_line</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>bostonbaad.bmp</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+        <io_parameter>
+          <feature>mouse</feature>
+          <order>2</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>right_click 383 400</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+    <io_group>
+      <co_process xsi:nil="true"/>
+      <io_parameters>
+        <io_parameter>
+          <feature>stdout_terminal_o</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>1 Expected to read 3 pixels from file bostonbaad.bmp, read 0
+Could not finish file bostonbaadOut.bmp</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+  </io_groups>
+</io_pair>

@@ -1,0 +1,19 @@
+@rem _Mouse_Boston_Good1
+..\Release\TC_C_170_v1025.exe boston.bmp
+del bostonOut.bmp
+@rem _Mouse_Butterfly24_Good2
+..\Release\TC_C_170_v1025.exe butterfly24.bmp
+del butterfly24Out.bmp
+@rem _Mouse_Maine_Good3
+..\Release\TC_C_170_v1025.exe maine.bmp
+del maineOut.bmp
+@rem _Mouse_Wallpaper_Good4
+..\Release\TC_C_170_v1025.exe Wallpaper1.bmp
+del Wallpaper1Out.bmp
+@rem _Mouse_google_Good5
+..\Release\TC_C_170_v1025.exe google.bmp
+del googleOut.bmp
+@rem _Mouse_Sun_Bad1
+..\Release\TC_C_170_v1025.exe sunbaad.bmp
+del sunbaadOut.bmp
+

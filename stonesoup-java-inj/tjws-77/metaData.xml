@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+<cwe_entry_id>23</cwe_entry_id>
+<derived_from_id>0</derived_from_id>
+<name>tjws</name>
+<language_id>Java</language_id>
+<generation_method_id>engineered</generation_method_id>
+<run_command>java $SS_JAVA_OPTS -cp ./lib/servlet.jar:./lib/webserver.jar -Dtjws.webappdir=./webapps Acme.Serve.Serve -a ./aliases.properties -p 8080 -l -c cgi-bin -w rogatkin.web.WarRoller -j org.git.jsp.JSPServlet</run_command>
+<build_command>ant $SS_ANT_OPTS</build_command>
+<run_directory>.</run_directory>
+<build_directory>.</build_directory>
+<line_count>6789</line_count>
+<description/>
+<id>1083</id>
+</project>

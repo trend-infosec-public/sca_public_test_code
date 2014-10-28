@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+<cwe_entry_id>606</cwe_entry_id>
+<derived_from_id>0</derived_from_id>
+<name>TC_Java_606_v582</name>
+<language>Java</language>
+<generation_method>engineered</generation_method>
+<run_command>java $SS_JAVA_OPTS -cp "bin" stonesoup.Main</run_command>
+<build_command>ant $SS_ANT_OPTS </build_command>
+<run_directory/>
+<build_directory/>
+<line_count>208</line_count>
+<annotations>
+<name>CONTROL_FLOW:FUNCTION_INVOCATION_OVERLOADING</name>
+<filename>/TC_Java_606_v582/src/stonesoup/Main.java</filename>
+<lineNumber>74</lineNumber>
+</annotations>
+<annotations>
+<name>DATA_TYPE:ARRAY_LENGTH_NONLINEAR_EXPRESSION</name>
+<filename>/TC_Java_606_v582/src/stonesoup/Main.java</filename>
+<lineNumber>65</lineNumber>
+</annotations>
+<annotations>
+<name>DATA_FLOW:ARRAY_INDEX_ARRAY_CONTENT_VALUE</name>
+<filename>/TC_Java_606_v582/src/stonesoup/Main.java</filename>
+<lineNumber>74</lineNumber>
+</annotations>
+<annotations>
+<name>SOURCE_TAINT:STDIN</name>
+<filename>/TC_Java_606_v582/src/stonesoup/ISBNChecker.java</filename>
+<lineNumber>25</lineNumber>
+</annotations>
+<annotations>
+<name>INTERACTION_POINT</name>
+<filename>/TC_Java_606_v582/src/stonesoup/ISBNChecker.java</filename>
+<lineNumber>25</lineNumber>
+</annotations>
+<description/>
+<id>855</id>
+</project>

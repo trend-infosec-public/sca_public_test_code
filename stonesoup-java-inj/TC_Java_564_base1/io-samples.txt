@@ -1,0 +1,17 @@
+#
+#  Format:  Input / Expected Output / Good | Bad
+#
+#  Note:  This *should* probably be run via an executable jar file
+#
+
+Bluth / Contractors:									/ good
+        Name: Bluth, Gob | Title: Magician ---
+
+Funke / Contractors:									/ good
+        Name: Funke, Tobias | Title: Actor ---
+
+"Bluth' or 'a'='a" / Contractors:							/ bad
+        		Name: Bluth, Gob | Title: Magician ---
+        		Name: Funke, Tobias | Title: Actor ---
+        		Name: Bluth, Michael | Title: CEO ---  CLASSIFIED
+        		Name: Bluth Sr., George | Title: Fugitive ---  CLASSIFIED

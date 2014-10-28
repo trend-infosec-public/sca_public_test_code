@@ -1,0 +1,12 @@
+@rem _base_c_1G
+..\Release\TC_C_416_base_c.exe cookie1.txt
+@rem _base_c_2G
+..\Release\TC_C_416_base_c.exe cookie2.txt
+@rem _base_c_3G
+..\Release\TC_C_416_base_c.exe cookie3.txt
+@rem _base_c_4G
+..\Release\TC_C_416_base_c.exe cookie4.txt
+@rem _base_c_5G
+..\Release\TC_C_416_base_c.exe cookie5.txt
+@rem _base_c_Bad
+..\Release\TC_C_416_base_c.exe "Bad^cookie.txt"

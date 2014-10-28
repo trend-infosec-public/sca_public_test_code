@@ -1,0 +1,29 @@
+This is a java CGI application. It expects to be run in the context of a standard CGI workflow which involves setting environment variables before execution. This particular application only requires two to be set: "HTTP_METHOD" (which should be set to "GET") and "QUERY_STRING" which should be set to the values laid out in good1-in.txt, good1-out.txt, and bad1-in.txt in the testData directory.
+
+Under a bash shell, here is how to run those three examples, along with the output they generate. My understanding is that there's a CGI workflow that the application will be plugged into, but given my lack of access to it, I thought some command line tests would be appropriate. I also understand that these will be imported into Eclipse, but to facilitate testing, I will be checking in a dist/CGIRedirector.jar file which will contain the stonesoup.CGIRedirector class and an appropriate manifest file.
+
+**good1-in.txt
+REQUEST_METHOD=GET;QUERY_STRING=action=hello;export REQUEST_METHOD; export QUERY_STRING;java -jar dist/CGIRedirector.jar 
+Content-type: text/html
+Status: 200 OK
+
+Hello world
+**
+
+**good2-in.txt
+REQUEST_METHOD=GET;QUERY_STRING="action=redir&arg1=local.html";export REQUEST_METHOD; export QUERY_STRING;java -jar dist/CGIRedirector.jar 
+Content-type: text/html
+Status: 302 Found
+Location: local.html
+
+You have been redirected.
+**
+
+**bad1-in.txt
+REQUEST_METHOD=GET;QUERY_STRING="action=redir&arg1=http%3A%2F%2Fwww.example.com%2Fphishing.html";export REQUEST_METHOD; export QUERY_STRING;java -jar dist/CGIRedirector.jar
+Content-type: text/html
+Status: 302 Found
+Location: http://www.example.com/phishing.html
+
+You have been redirected.
+**

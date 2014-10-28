@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<baseProgram name="TFTP Server" projectName="TFTPServerC" language="C">
+    <description>This program acts as a TFTP server with only the ability to send requested
+  files to connecting clients using a TCP connection.  The server can
+  only handle one request from one client before exiting.  Please note that
+  this program should only be used with the TFTPClientC program, it will
+  not work with commercial FTP or TFTP clients
+    </description>
+    <weaknessClasses>
+      <weaknessClass name=""/>
+    </weaknessClasses>
+</baseProgram>

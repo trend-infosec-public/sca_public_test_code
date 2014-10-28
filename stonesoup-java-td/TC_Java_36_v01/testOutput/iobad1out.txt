@@ -1,0 +1,6 @@
+File: /etc/passwd
+Owner: janedoe
+Size: xxx
+---------- FILE BEGIN ----------
+Total bytes read > 100
+----------  FILE END  ----------

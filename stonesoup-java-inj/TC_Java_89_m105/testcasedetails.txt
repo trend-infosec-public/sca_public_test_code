@@ -1,0 +1,5 @@
+MySQL 
+Bypass Auth Mechanism
+	liststudentcourses,		
+	register,  VULNERABLE
+	unregister, 

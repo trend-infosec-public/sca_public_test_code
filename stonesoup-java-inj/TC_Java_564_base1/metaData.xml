@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+<cwe_entry_id>564</cwe_entry_id>
+<derived_from_id>0</derived_from_id>
+<name>TC_Java_564_base1</name>
+<language>Java</language>
+<generation_method>base-test-case</generation_method>
+<run_command>java $SS_JAVA_OPTS -cp "bin:lib/*"  stonesoup.ContratorDb</run_command>
+<build_command>ant $SS_ANT_OPTS </build_command>
+<run_directory/>
+<build_directory/>
+<line_count>198</line_count>
+<annotations>
+<name>CROSSOVER_POINT</name>
+<filename>/TC_Java_564_base1/src/stonesoup/ContratorDb.java</filename>
+<lineNumber>119</lineNumber>
+</annotations>
+<annotations>
+<name>TRIGGER_POINT</name>
+<filename>/TC_Java_564_base1/src/stonesoup/ContratorDb.java</filename>
+<lineNumber>123</lineNumber>
+</annotations>
+<annotations>
+<name>INTERACTION_POINT</name>
+<filename>/TC_Java_564_base1/src/stonesoup/ContratorDb.java</filename>
+<lineNumber>85</lineNumber>
+</annotations>
+<description/>
+<id>1586</id>
+</project>

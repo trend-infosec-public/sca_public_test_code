@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+<cwe_entry_id>690</cwe_entry_id>
+<derived_from_id>0</derived_from_id>
+<name>TC_C_690_v1124</name>
+<language>C</language>
+<generation_method>engineered</generation_method>
+<run_command>Release/TC_C_690_v1124 </run_command>
+<build_command>make</build_command>
+<run_directory/>
+<build_directory/>
+<line_count>480</line_count>
+<annotations>
+<name>SOURCE_TAINT:SOCKET</name>
+<filename>TC_C_690_v1124\src\main.c</filename>
+<lineNumber>185</lineNumber>
+</annotations>
+<annotations>
+<name>CONTROL_FLOW:START_CONDITION_CONTROLLED_LOOP</name>
+<filename>TC_C_690_v1124\src\main.c</filename>
+<lineNumber>351</lineNumber>
+</annotations>
+<annotations>
+<name>DATA_FLOW:ARRAY_INDEX_VARIABLE</name>
+<filename>TC_C_690_v1124\src\main.c</filename>
+<lineNumber>337</lineNumber>
+</annotations>
+<annotations>
+<name>DATA_TYPE:SIGNED_INT</name>
+<filename>TC_C_690_v1124\src\main.c</filename>
+<lineNumber>190</lineNumber>
+</annotations>
+<annotations>
+<name>TRIGGER_POINT</name>
+<filename>TC_C_690_v1124\src\main.c</filename>
+<lineNumber>303</lineNumber>
+</annotations>
+<annotations>
+<name>Passing a NULL pointer.</name>
+<filename>TC_C_690_v1124\src\main.c</filename>
+<lineNumber>302</lineNumber>
+</annotations>
+<description/>
+<id>1123</id>
+</project>

@@ -1,0 +1,18 @@
+//-----------------------------------------------------------------------
+// Commands:															-
+//	list 					Lists server's directory contents			-
+//	get <file_name>			Retrieves a file from the server			-
+//	send <file_name>		Stores a file on the server					-
+//	rm <file_name>		Deletes a file from the server					-
+//	cd <relative_path>		Changes the server's directory				-
+//	lcd <path> <y/n>		Changes the local directory. followed 		-
+//							  by true if you specified an absolute path	-
+//-----------------------------------------------------------------------
+list
+cd ini
+list
+rm FTPServer.ini
+send FTPServer.ini
+list
+cd ..
+quit

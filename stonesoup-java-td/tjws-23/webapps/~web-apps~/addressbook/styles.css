@@ -1,0 +1,91 @@
+.smallHeader {
+	margin: 1em 0 0.5em 0;
+	padding: 2px 0px 4px 10px;
+	background-color: #f0f6f8;
+	border-top: 1px solid #b8cfd8;
+}
+
+		.form-field-info {
+			background-color: red;
+			color: white;
+			position: absolute;
+			padding: 5px;
+			z-index: 999;
+		}
+		div.label {
+			position: relative;
+			padding-left: 20px;
+			margin-bottom: 4px;
+		}
+		div.form-field {
+			top: 0;
+			position: absolute;
+			left: 15em;
+		}
+
+		div.form-flowed {
+			top: 0;
+			position: relative;
+			padding-left: 10px;
+		}
+
+.b-button,
+.b-button * {
+	height: 22px;
+	line-height: 22px;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	cursor: default;
+}
+
+.b-button{
+	position: relative;
+	left: 0;
+}
+.b-button-mid {
+	position: absolute;
+	left: 0;
+	background-color: #cccccc;
+	padding: 0 10px;
+	border: 1px solid black;
+}
+
+.b-button-invisible {
+	position: relative;
+	left: 0;
+	padding: 0 10px;
+	visibility: hidden;
+}
+
+.b-button-hov .b-button-mid{
+	background-color: #999999;
+	color: #ffffff;
+}
+
+.b-button-pres .b-button-mid {
+	background-color: #666666;
+	color: #ffffff;
+	padding: 0 9px 0 11px;
+}
+
+.b-button-g {
+        cursor: hand;
+	padding: 0 10px;
+	position: relative;
+	left: 8;
+        border-left-width: 1px; border-right-style: solid; border-right-width: 1px; 
+               border-top-width: 1px; border-bottom-style: solid; 
+               border-bottom-width: 1px; background-color: #CEEAFF
+}
+
+input        { border-style:solid; border-width:1px; font-family: Verdana; font-size: 8pt; background-color: #FFF8CC;  }
+
+.header_text { font-family: Arial; font-size: 8pt; color: #FFFFFF }
+
+.fineprint   { font-size: 2mm; color: #808080; font-variant: small-caps; font-weight: bold }
+
+.lc          { color:#0000CC; font-family: Arial; font-size: 8pt }
+
+body,p,li,div,td    { font-family: Tahoma; font-size: 9pt }
+th                  { font-family: Tahoma; font-size: 10pt; font-weight: bolder }

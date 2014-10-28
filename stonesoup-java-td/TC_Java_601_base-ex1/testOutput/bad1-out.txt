@@ -1,0 +1,6 @@
+Content-type: text/html
+Status: 302 Found
+Location: http://www.example.com/phishing.html
+
+You have been redirected.
+

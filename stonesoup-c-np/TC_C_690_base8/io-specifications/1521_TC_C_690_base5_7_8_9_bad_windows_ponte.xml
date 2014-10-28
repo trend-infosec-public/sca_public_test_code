@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<io_pair>
+  <description>Program will seg fault if there is a "&amp;" in the filename.</description>
+  <id>1521</id>
+  <io_pair_category>bad</io_pair_category>
+  <name>TC_C_690_base5_7_8_9_bad_windows_ponte</name>
+  <platform>WINDOWS</platform>
+  <technical_impact>UNSPECIFIED</technical_impact>
+  <timeout_execute>10</timeout_execute>
+  <io_groups>
+    <io_group>
+      <co_process>aclient -h 127.0.0.1 -p 9080 -f "be&amp;ser.exe"</co_process>
+      <io_parameters/>
+    </io_group>
+    <io_group>
+      <co_process xsi:nil="true"/>
+      <io_parameters>
+        <io_parameter>
+          <feature>return_status_o</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>139</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+  </io_groups>
+</io_pair>

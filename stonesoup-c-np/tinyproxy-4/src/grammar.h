@@ -1,0 +1,43 @@
+typedef union {
+	unsigned int num;
+	char *cptr;
+	void *ptr;
+} YYSTYPE;
+#define	KW_PORT	257
+#define	KW_LISTEN	258
+#define	KW_LOGFILE	259
+#define	KW_PIDFILE	260
+#define	KW_SYSLOG	261
+#define	KW_MAXCLIENTS	262
+#define	KW_MAXSPARESERVERS	263
+#define	KW_MINSPARESERVERS	264
+#define	KW_STARTSERVERS	265
+#define	KW_MAXREQUESTSPERCHILD	266
+#define	KW_TIMEOUT	267
+#define	KW_USER	268
+#define	KW_GROUP	269
+#define	KW_ANONYMOUS	270
+#define	KW_FILTER	271
+#define	KW_XTINYPROXY	272
+#define	KW_TUNNEL	273
+#define	KW_UPSTREAM	274
+#define	KW_ALLOW	275
+#define	KW_DENY	276
+#define	KW_YES	277
+#define	KW_NO	278
+#define	KW_LOGLEVEL	279
+#define	KW_LOG_CRITICAL	280
+#define	KW_LOG_ERROR	281
+#define	KW_LOG_WARNING	282
+#define	KW_LOG_NOTICE	283
+#define	KW_LOG_CONNECT	284
+#define	KW_LOG_INFO	285
+#define	IDENTIFIER	286
+#define	NUMBER	287
+#define	STRING	288
+#define	NUMERIC_ADDRESS	289
+#define	STRING_ADDRESS	290
+#define	NETMASK_ADDRESS	291
+
+
+extern YYSTYPE yylval;

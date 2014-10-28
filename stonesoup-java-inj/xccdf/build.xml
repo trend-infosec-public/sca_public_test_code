@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<!--
+<project basedir="." default="build" name="xccdf">
+-->
+<project basedir="." default="all" name="xccdf">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="xccdf.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="lib/commons-1.jar"/>
+        <pathelement location="lib/gov.nist.xccdf-1.0.jar"/>
+        <pathelement location="lib/junit-4.6.jar"/>
+        <pathelement location="lib/saxon-8.8.jar"/>
+        <pathelement location="lib/saxon-dom-8.8.jar"/>
+        <pathelement location="lib/stax-api-1.0.1.jar"/>
+        <pathelement location="lib/xmlbeans-2.3.0.jar"/>
+        <pathelement location="lib/xmlbeans-xpath-2.3.0.jar"/>
+        <pathelement location="lib/gov.nist.ocil-2.0.jar"/>
+        <pathelement location="lib/org.mitre.oval-5.9.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+        <delete dir="results"/>
+	<delete file="xccdfexec.jar"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="xccdf.classpath"/>
+        </javac>
+    </target>
+    <target depends="build" name="all">
+        <jar destfile="xccdfexec.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.mitre.scap.xccdf.XCCDFInterpreter"/>
+                <attribute name="Class-Path" value=". lib/commons-1.jar lib/gov.nist.xccdf-1.0.jar lib/junit-4.6.jar lib/saxon-8.8.jar lib/saxon-dom-8.8.jar lib/stax-api-1.0.1.jar lib/xmlbeans-2.3.0.jar lib/xmlbeans-xpath-2.3.0.jar lib/gov.nist.ocil-2.0.jar lib/org.mitre.oval-5.9.jar"/>
+            </manifest>
+            <fileset dir="bin"/>
+        </jar>   
+    </target>
+</project>

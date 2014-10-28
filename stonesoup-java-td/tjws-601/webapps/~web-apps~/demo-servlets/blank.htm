@@ -1,0 +1,289 @@
+<html>
+<style>
+//<!--
+body,td,a,p,.h{font-family:arial,sans-serif;}
+a:link {color:#0000cc; }
+a:visited { color:#551a8b; }
+a:active { color:#ff0000; }
+.h{font-size: 20px;}
+.q{color:#0000cc;}
+.es {display:;}
+.eh {display:none;}
+.mhdr {width:100%;border-top:1px solid #3366cc;padding:0px;margin:0px;font-size:82%;}
+.mttl {width:90%;background-color:#e5ecf9;padding-left:2px;font-weight:bold;padding-right:5px;font-size:122%;}
+.medit {width:10%;background-color:#e5ecf9;white-space:nowrap;text-align:right;padding-right:2px;}
+.mttli {overflow:hidden;height:1.2em;}
+.el,.csl{color:#7777cc;}
+form{display:inline;}
+.c{clear:both;}
+a.ab{color: #0000cc;}
+h2.modtitle {width:100%;padding-top:0px;padding-bottom:0px;margin: 0em;font-size:100%;}
+//-->
+</style>
+<script>
+  function triggerVisibility(name) {
+     var el = document.getElementById(name) ;
+     if (el) {
+       if(el.className == 'es')
+          el.className = 'eh';
+       else
+         el.className = 'es';
+     }
+  }
+  function triggerEditibility(name) {
+     var el = document.getElementById(name) ;
+     if (el) {
+         if(el.firstChild.type == 'textarea')
+            el.innerHTML = el.firstChild.value;
+         else {
+           var h = el.innerHTML;
+           el.innerHTML = '<textarea rows=6>'+h+'</textarea>';
+	 }
+     }
+  }
+</script>
+<h2>Dmitriy Rogatkin's Web Home</h2>
+<table border="0" width="100%" cellspacing="8">
+	<tr>
+	   <td width="33%" valign="top">
+              <table class=mhdr cellspacing=0 cellpadding=0>
+                <tr>
+                  <td class=mttl><a class=mttli><font color=#3366cc>7Bee</font></a></td>
+                  <td class=medit><a href="javascript:triggerEditibility('7bee_edit')" class=el>edit</a><a href="javascript:triggerVisibility('7bee')" style="color: #77c; font-family: arial,sans-serif">X</a></td>
+                </tr>
+                <tr class=es>
+                   <td colspan=2 bgcolor=#e5ecf9 style="font-family: arial,sans-serif">
+                   </td>
+                </tr>
+                <tr class=es id=7bee>
+                   <td colspan=2 bgcolor=#FFFFCC style="font-family: arial,sans-serif" id=7bee_edit>
+                         7Bee is Java build tool with the following benefits:
+                	<ul>
+				<li>Very small foot print (10 times less than ant)</li>
+			 	<li>Very fast (10%-20% faster than Ant)</li>
+			 	<li>Very flexible and extendable with a customizable grammar</li>
+	        	</ul>
+ 		        <p align="right"><a href="http://7bee.j2ee.us/bee/index-bee.html">more</a>...</td>
+                </tr></table>
+	     </td>
+	     <td valign="top" width="34%">
+               <table class=mhdr cellspacing=0 cellpadding=0>
+                  <tr>
+                    <td class=mttl><font color="#3366CC"><a class=mttli>MediaChest</a></font></td>
+                    <td class=medit><a href="javascript:triggerEditibility('mediachest_edit')" class=el>edit</a>
+                       <a href="javascript:triggerVisibility('mediachest')" style="color: #77c; font-family: arial,sans-serif">X</a></td>
+                  </tr>
+                  <tr class=es>
+                    <td colspan=2 bgcolor=#e5ecf9 style="font-family: arial,sans-serif">
+                    </td>
+                  </tr>
+                  <tr class=es id=mediachest>
+                    <td colspan=2 bgcolor=#FFFFCC style="font-family: arial,sans-serif" id=mediachest_edit>
+                      MediaChest helps to organize all personal medias, as pictures, musics and 
+	        	videos. Powerful Internet publishing and sharing features. Full integration with popular DAP  
+		      like iPod including smart play lists and album art.<p align="right">
+		      <a href="http://mediachest.sourceforge.net/">more</a>...</td>
+                  </tr></table>
+	     </td>
+	     <td valign="top">
+                <table class=mhdr cellspacing=0 cellpadding=0 id="table4">
+                  <tr>
+                     <td class=mttl><font color="#3366CC"><a class=mttli>Java Web 
+               		Container</a></font></td>
+                     <td class=medit><a href="javascript:triggerEditibility('tjws_edit')" class=el>edit</a><a href="javascript:triggerVisibility('tjws')" style="color: #77c; font-family: arial,sans-serif">X</a></td>
+                  </tr>
+                  <tr class=es>
+                     <td colspan=2 bgcolor=#e5ecf9 style="font-family: arial,sans-serif">
+                     </td>
+                  </tr>
+                  <tr class=es id=tjws>
+                     <td colspan=2 bgcolor=#FFFFCC style="font-family: arial,sans-serif" id=tjws_edit>
+                          TJWS is Java Web server and J2EE servlet container. 2.4 servlet 
+                 		specification. Footprint starts from 60Kb making it an ideal solution 
+           		for embedded deployment.<p align="right">
+	         	<a href="http://tjws.sourceforge.net/">more</a>...
+                     </td>
+                  </tr></table>
+	      </td>
+	  </tr>
+	  <tr>
+		<td width="33%" valign="top">
+
+<table class=mhdr cellspacing=0 cellpadding=0>
+   <tr>
+     <td class=mttl><font color="#3366CC"><a class=mttli>jAddressBook</a></font></td>
+     <td class=medit><a href="javascript:triggerEditibility('jab_edit')" class=el>edit</a><a href="javascript:triggerVisibility('jab')" style="color: #77c; font-family: arial,sans-serif">X</a></td>
+   </tr>
+   <tr class=es>
+     <td colspan=2 bgcolor=#e5ecf9 style="font-family: arial,sans-serif">
+     </td>
+   </tr>
+   <tr class=es id=jab>
+     <td colspan=2 bgcolor=#FFFFCC style="font-family: arial,sans-serif" id=jab_edit>
+       Web and Java client an address book application. Can keep different 
+		information about your contacts, collaboration, sharing, exchange and much more.
+		<a href="http://7bee.j2ee.us/addressbook/ab/Registry">Register</a> to 
+		be a beta tester of web version.<p align="right">
+		<a href="http://jaddressbook.sourceforge.net/">more</a>...
+     </td>
+   </tr></table>
+		</td>
+		<td width="33%" valign="top">
+
+<table class=mhdr cellspacing=0 cellpadding=0>
+   <tr>
+     <td class=mttl><a class=mttli><font color=#3366cc>Chat House</font></a></td>
+     <td class=medit><a href="javascript:triggerEditibility('ch_edit')" class=el>edit</a><a href="javascript:triggerVisibility('ch')" style="color: #77c; font-family: arial,sans-serif">X</a></td>
+   </tr>
+   <tr class=es>
+     <td colspan=2 bgcolor=#e5ecf9 style="font-family: arial,sans-serif">
+     </td>
+   </tr>
+   <tr class=es id=ch>
+     <td colspan=2 bgcolor=#FFFFCC style="font-family: arial,sans-serif" id=ch_edit>
+       Server push based web chat solution. Pure HTML. Many nice features.<p align="right">
+		<a href="http://7bee.j2ee.us/chathouse/readme.htm">more</a>...</td>
+   </tr></table>
+		</td>
+		<td valign="top">
+
+<table class=mhdr cellspacing=0 cellpadding=0>
+   <tr>
+     <td class=mttl><font color="#3366CC"><a class=mttli>Tree View</a></font></td>
+     <td class=medit><a href="javascript:triggerEditibility('treev_edit')" class=el>edit</a><a href="javascript:triggerVisibility('treev')" style="color: #77c; font-family: arial,sans-serif">X</a></td>
+   </tr>
+   <tr class=es>
+     <td colspan=2 bgcolor=#e5ecf9 style="font-family: arial,sans-serif">
+     </td>
+   </tr>
+   <tr class=es id=treev>
+     <td colspan=2 bgcolor=#FFFFCC style="font-family: arial,sans-serif" id=treev_edit>
+       Like servlet based tree on right? Powerful and simple tree navigation 
+		solution for any web application. Used in Chat House and jAddressBook.<p align="right">
+		<a href="http://7bee.j2ee.us/treeview-doc.html">more</a>...</td>
+   </tr></table>
+		</td>
+	</tr>
+	<tr>
+		<td width="34%" valign="top">
+
+<table class=mhdr cellspacing=0 cellpadding=0>
+   <tr>
+     <td class=mttl><font color="#3366CC"><a class=mttli>xBox</a></font></td>
+     <td class=medit><a href="javascript:triggerEditibility('xbox_edit')" class=el>edit</a><a href="javascript:triggerVisibility('xbox')" style="color: #77c; font-family: arial,sans-serif">X</a></td>
+   </tr>
+   <tr class=es>
+     <td colspan=2 bgcolor=#e5ecf9 style="font-family: arial,sans-serif">
+     </td>
+   </tr>
+   <tr class=es id=xbox>
+     <td colspan=2 bgcolor=#FFFFCC style="font-family: arial,sans-serif" id=xbox_edit>
+       Java bean box with a layout editor and XML persistent. Nice tool for UI 
+		creation.<p align="right"><a href="http://xbox.sourceforge.net/">more</a>...&nbsp;
+     </td>
+   </tr></table>
+	</td>
+	<td width="33%" valign="top">
+
+<table class=mhdr cellspacing=0 cellpadding=0>
+   <tr>
+     <td class=mttl><font color="#3366CC"><a class=mttli>Amazing Renamer</a></font></td>
+     <td class=medit><a href="javascript:triggerEditibility('ar_edit')" class=el>edit</a><a href="javascript:triggerVisibility('ar')" style="color: #77c; font-family: arial,sans-serif">X</a></td>
+   </tr>
+   <tr class=es>
+     <td colspan=2 bgcolor=#e5ecf9 style="font-family: arial,sans-serif">
+     </td>
+   </tr>
+   <tr class=es id=ar>
+     <td colspan=2 bgcolor=#FFFFCC style="font-family: arial,sans-serif" id=ar_edit>
+       In a need of renaming a bunch of files having a particular pattern in name?<p align="right">
+		<a href="http://7bee.j2ee.us/ar/ar.html">more</a>...
+     </td>
+   </tr></table>
+		</td>
+		<td valign="top">
+
+<table class=mhdr cellspacing=0 cellpadding=0>
+   <tr>
+     <td class=mttl><font color="#3366CC"><a class=mttli>Technology Stack</a></font></td>
+     <td class=medit><a href="javascript:triggerEditibility('tstack_edit')" class=el>edit</a><a href="javascript:triggerVisibility('tstack')" style="color: #77c; font-family: arial,sans-serif">X</a></td>
+   </tr>
+   <tr class=es>
+     <td colspan=2 bgcolor=#e5ecf9 style="font-family: arial,sans-serif">
+     </td>
+   </tr>
+   <tr class=es id=tstack>
+     <td colspan=2 bgcolor=#FFFFCC style="font-family: arial,sans-serif" id=tstack_edit>
+       Intrigued about all these projects? How are they small, fast, simple, and 
+		scalable? Just few architecture and design principles...<p align="right">
+		<a href="tstack.htm">more</a>..</td>
+   </tr></table>
+		</td>
+	</tr>
+	<tr>
+		<td width="34%" valign="top">
+
+<table class=mhdr cellspacing=0 cellpadding=0>
+   <tr>
+     <td class=mttl><font color="#3366CC"><a class=mttli>Search Filter</a></font></td>
+     <td class=medit><a href="javascript:triggerEditibility('sf_edit')" class=el>edit</a><a href="javascript:triggerVisibility('sf')" style="color: #77c; font-family: arial,sans-serif">X</a></td>
+   </tr>
+   <tr class=es>
+     <td colspan=2 bgcolor=#e5ecf9 style="font-family: arial,sans-serif">
+     </td>
+   </tr>
+   <tr class=eh id=sf>
+     <td colspan=2 bgcolor=#FFFFCC style="font-family: arial,sans-serif" id=sf_edit>
+       Got lost in thousands records giving you by a search engine? 
+		Filter everything not relevant and get only one record, <b>the one</b>!<p align="right"><a href="#">more soon</a>...&nbsp;
+     </td>
+   </tr></table>
+	</td>
+	<td width="33%" valign="top">
+
+<table class=mhdr cellspacing=0 cellpadding=0>
+   <tr>
+     <td class=mttl><font color="#3366CC"><a class=mttli>WebPod</a></font></td>
+     <td class=medit><a href="javascript:triggerEditibility('wp_edit')" class=el>edit</a><a href="javascript:triggerVisibility('wp')" style="color: #77c; font-family: arial,sans-serif">X</a></td>
+   </tr>
+   <tr class=es>
+     <td colspan=2 bgcolor=#e5ecf9 style="font-family: arial,sans-serif">
+     </td>
+   </tr>
+   <tr class=eh id=wp>
+     <td colspan=2 bgcolor=#FFFFCC style="font-family: arial,sans-serif" id=wp_edit>
+       Think different... A new approach of managing your iPod.<p align="right">
+		<a href="#">more coming soon</a>...
+     </td>
+   </tr></table>
+		</td>
+		<td valign="center"><p align=center style="font-size: 10pt">This space intentionally left blank</p>
+
+		</td>
+	</tr>
+</table>
+<p style="font-size: 10pt; font-weight: bolder">
+Complete list of my open source projects at Source Forge
+<ul style="font-size: 10pt">
+<li class=mttli>&nbsp;<a href="http://sourceforge.net/projects/mediachest">MediaChest</a> 
+(registered 2001-09-07 00:13)</li>
+<li>&nbsp;<a href="http://sourceforge.net/projects/tjws">Tiny Java Web Server</a> 
+(registered 2001-09-07 00:18)</li>
+<li>&nbsp;<a href="http://sourceforge.net/projects/jaddressbook">Java 
+AddressBook</a> (registered 2001-09-22 02:17) </li>
+<li>&nbsp;<a href="http://sourceforge.net/projects/xbox">xBox</a> (registered 
+2001-09-22 02:22)</li>
+<li>&nbsp;<a href="http://sourceforge.net/projects/welldone">Make your project 
+well done</a> (registered 2004-01-07 01:37)</li>
+<li>&nbsp;<a href="http://sourceforge.net/projects/arbat">Light Java CORBA 
+services</a> (registered 2004-02-25 00:08) </li>
+</ul>
+<center><img src="/demo-servlets/signature/please/"></center>
+<hr>
+<p><sup><font face="Arial">1</font></sup><font face="Arial" size="1" color="#808080">If 
+you run the demo on Unix system, then you will notice right pane as blank. How 
+to fix that? Fairly simple, go to tjws_home/webapps/~web-apps~/demo-servlets/WEB-INF/config/, 
+open treeview.properties for editing and replace ':' by ':' in TEMPLATEROOT 
+definition.</font> </p>
+
+</html>

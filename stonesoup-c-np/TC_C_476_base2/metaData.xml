@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+<cwe_entry_id>476</cwe_entry_id>
+<derived_from_id>0</derived_from_id>
+<name>TC_C_476_base2</name>
+<language>C</language>
+<generation_method>base-test-case</generation_method>
+<run_command>Release/TC_C_476_base2 </run_command>
+<build_command>make</build_command>
+<run_directory/>
+<build_directory/>
+<line_count>594</line_count>
+<description/>
+<id>1617</id>
+</project>

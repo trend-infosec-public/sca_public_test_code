@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<io_pair>
+  <description xsi:nil="true"/>
+  <id>1384</id>
+  <io_pair_category>bad</io_pair_category>
+  <name>TC_C_129_881_badp</name>
+  <platform>BOTH</platform>
+  <technical_impact>READ_APPLICATION_DATA</technical_impact>
+  <timeout_execute>10</timeout_execute>
+  <io_groups>
+    <io_group>
+      <co_process xsi:nil="true"/>
+      <io_parameters>
+        <io_parameter>
+          <feature>command_line</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>7 start.enc 20</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+    <io_group>
+      <co_process xsi:nil="true"/>
+      <io_parameters>
+        <io_parameter>
+          <feature>stdout_terminal_o</feature>
+          <order>1</order>
+          <io_values>
+            <io_value>
+              <order>1</order>
+              <val>An error occurred in the program. 
+Error during CryptAcquireContext!
+
+Error number 80090016.
+Registers are:
+
+ 1 2 3 4 5 6 7 8 9 0
+The following commands are acceptable:
+100 - halts and quits
+2dn - Sets register d to n. Example 234
+3dn - Add n to register d
+4dn - Multiply register d by n Example 459
+5dn - Print register d.  Sample 59
+6 output.txt - Get the next argument containing the filename to import. The file contains values to set the registers to.
+7 d n - Print from register d to register n. Make sure you include spaces between the start and end indexes.Sample 7 5 9
+
+Command: 7
+Print registers -1 - 20
+Opening start.enc
+The source encrypted file, start.enc, is open. 
+</val>
+              <val_type>USE_TEXT_DIRECTLY</val_type>
+            </io_value>
+          </io_values>
+        </io_parameter>
+      </io_parameters>
+    </io_group>
+  </io_groups>
+</io_pair>
